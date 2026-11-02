@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: >-
+  If you use or discuss this research foundation, please cite this repository
+  and identify the specific version consulted. A DOI may be added after a
+  corresponding archived release is registered.
+type: software
+title: 'Adversarial Structural Security Intelligence (ASSI): Research Foundation'
+abstract: >-
+  ASSI is a specification-first research framework investigating structural
+  security beyond cryptographic validity. It develops research proposals for
+  compositional identity and UTN, directional weak evidence and REN,
+  bidirectional conditional evidence feedback (BCEF), independently governed
+  authorization, adversarial security drives, security residuals, autonomous
+  questioning, and validated recursive self-improvement. The v0.1.0 release
+  is a research foundation, not an implementation, security certification,
+  or claim of empirical validation.
+authors:
+  - family-names: Tan
+    given-names: Sizhe
+  - name: GPT-Obot
+    affiliation: OpenAI
+repository-code: 'https://github.com/sizhet/Adversarial-Structural-Security-Intelligence'
+url: 'https://github.com/sizhet/Adversarial-Structural-Security-Intelligence'
+version: 0.1.0
+license: Apache-2.0
+keywords:
+  - structural security
+  - adversarial intelligence
+  - compositional identity
+  - structural authorization
+  - bidirectional conditional evidence feedback
+  - weak evidence
+  - security residuals
+  - autonomous questioning
+  - validated recursive self-improvement
+  - security governance
+  - collective learning
+# Add date-released only when the GitHub release is actually published.
+# Add identifiers (including a Zenodo DOI) only after registration succeeds.
+# Review author attribution and the repository URL before publishing.
