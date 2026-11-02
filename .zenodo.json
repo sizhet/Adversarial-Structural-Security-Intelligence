@@ -1,0 +1,48 @@
+{
+  "title": "Adversarial Structural Security Intelligence (ASSI): Research Foundation",
+  "description": "<p>Adversarial Structural Security Intelligence (ASSI) is a specification-first research foundation investigating structural security beyond cryptographic validity. It develops research hypotheses, conceptual architectures, and proposed contracts for compositional identity and Universal Trigger Nodes (UTN), directional weak-evidence reasoning and Relational Evidence Navigation (REN), Bidirectional Conditional Evidence Feedback (BCEF), independently governed authorization, adversarial security drives, security residuals, autonomous questioning, and validated recursive self-improvement.</p><p>Version 0.1.0 comprises twelve core research papers, six draft specifications, five conceptual cases, four extensions, and research-navigation and validation-planning documents. It proposes four benchmark families for future controlled, synthetic experiments; these benchmarks are plans, not completed empirical results. The repository does not claim a working security product, independent validation, production readiness, certification, or a demonstrated security guarantee.</p><p>Key separation principles: inference is not authority; simulation is not validation; validation is not deployment approval. The project is intended to support transparent critique, falsifiable research, and collective learning.</p>",
+  "creators": [
+    {
+      "name": "Tan, Sizhe"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "GPT-Obot",
+      "type": "Other",
+      "affiliation": "OpenAI"
+    }
+  ],
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "adversarial structural security intelligence",
+    "structural security",
+    "cryptographic validity",
+    "compositional identity",
+    "UTN",
+    "REN",
+    "weak evidence",
+    "bidirectional conditional evidence feedback",
+    "BCEF",
+    "independent authorization",
+    "adversarial security drives",
+    "security residuals",
+    "autonomous questioning",
+    "validated recursive self-improvement",
+    "security governance",
+    "collective learning"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sizhet/Adversarial-Structural-Security-Intelligence",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Research foundation only. The proposed benchmarks and validation roadmap do not constitute completed experiments or security certification. Verify attribution and repository URL before release."
+}
