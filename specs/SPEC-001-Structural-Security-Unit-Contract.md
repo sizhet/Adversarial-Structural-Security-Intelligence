@@ -6,7 +6,7 @@
 **Date:** 2026-11-02  
 **License:** Apache-2.0  
 **Repository path:** `specs/SPEC-001-Structural-Security-Unit-Contract.md`  
-**Related documents:** ASSI-004, ASSI-005, ASSI-006, ASSI-007, ASSI-008, ASSI-009, ASSI-010, ASSI-011, ASSI-012; SPEC-002–006 (planned)
+**Related documents:** ASSI-004, ASSI-005, ASSI-006, ASSI-007, ASSI-008, ASSI-009, ASSI-010, ASSI-011, ASSI-012; SPEC-002–006
 
 ## Abstract
 

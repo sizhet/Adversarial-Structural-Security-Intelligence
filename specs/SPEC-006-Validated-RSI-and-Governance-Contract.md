@@ -555,5 +555,5 @@ This v0.1.0 text is a research foundation. Breaking changes to unit types, state
 
 **Repository placement:** `specs/SPEC-006-Validated-RSI-and-Governance-Contract.md`  
 **Previous specification:** `specs/SPEC-005-Adversarial-Drive-and-Relay-Contract.md`  
-**Next planned sequence:** ASSI case studies, extensions, figures, and repository publication assets.
+**Next sequence:** ASSI case studies, extensions, figures, and repository publication assets.
 
