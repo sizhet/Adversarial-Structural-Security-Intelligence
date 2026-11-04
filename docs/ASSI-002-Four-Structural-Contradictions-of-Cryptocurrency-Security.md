@@ -203,6 +203,12 @@ An expert security team may detect a dangerous operation but lack the ability to
 
 ---
 
+![Fig-002-Four-Structural-Security-Contradictions.png](../figures/Fig-002-Four-Structural-Security-Contradictions.png)
+
+*Figure 2. Four interacting contradictions in cryptocurrency security: local cryptographic validity does not resolve system-level trust, identity, liquidity, and governance risks.*
+
+---
+
 ## 7. The four tensions interact
 
 The contradictions should not be studied as independent checklists. Their interactions can amplify risk:

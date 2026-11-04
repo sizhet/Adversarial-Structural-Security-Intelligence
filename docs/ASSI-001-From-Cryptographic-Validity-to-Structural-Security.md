@@ -14,6 +14,14 @@ This paper introduces **Adversarial Structural Security Intelligence (ASSI)** as
 
 **Keywords:** structural security; cryptographic validity; authorization intent; trust relocation; compositional identity; bidirectional IF; security residual; adversarial simulation; bounded loss; structural relay.
 
+---
+
+![Fig-001-ASSI-Grand-Architecture.png](figures/Fig-001-ASSI-Grand-Architecture.png)
+    
+*Figure 1. Proposed ASSI grand architecture: structural evidence and adaptive learning inform, but do not override, independently governed authorization and safety enforcement.*
+
+---
+
 ## 1. The central distinction
 
 A cryptographic verifier typically answers a narrow question: *Does this operation satisfy the protocol's verification rules under the relevant keys and state?* A security operator needs to answer broader questions:

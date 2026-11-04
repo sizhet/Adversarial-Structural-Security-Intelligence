@@ -106,6 +106,14 @@ Here \(Q\) denotes questions, \(C\) candidates, \(V\) validation, and \(G\) gove
 
 A shared underlying model, dataset, administrator, or infrastructure dependency can undermine apparent independence. The design must identify such common-mode failures.
 
+---
+
+![Fig-007-Security-Residual-to-Validated-RSI.png](../figures/Fig-007-Security-Residual-to-Validated-RSI.png)
+
+*Figure 7. Validated security RSI converts residuals into testable questions and governed improvements; unvalidated candidates remain outside production authority.*
+
+---
+
 ## 5. AQSI: Residual-to-Question Transformation
 
 A residual becomes more useful when expressed as a question with a falsifiable answer. Examples:

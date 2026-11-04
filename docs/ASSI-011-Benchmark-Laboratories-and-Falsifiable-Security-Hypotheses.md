@@ -132,6 +132,14 @@ Use **development**, **validation**, **locked test**, and **future-shift** parti
 
 No single aggregate ASSI score is sufficient for a safety claim. Primary safety outcomes must remain visible even if a composite metric improves.
 
+---
+
+![Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png](../figures/Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png)
+
+*Figure 8. Proposed ASSI benchmark families and staged validation roadmap, emphasizing falsifiable hypotheses, independent evaluation, and documented failures.*
+
+---
+
 ## 4. BM-001 — Compositional Identity Laboratory
 
 ### 4.1 Objective

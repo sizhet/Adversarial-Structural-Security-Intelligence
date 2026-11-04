@@ -161,6 +161,12 @@ The lifecycle supports **branching**: multiple Red hypotheses, Blue candidates, 
 
 ---
 
+![Fig-006-Adversarial-Drives-and-Competitive-Relay.png](../figures/Fig-006-Adversarial-Drives-and-Competitive-Relay.png)
+
+*Figure 6. Four-drive adversarial research and competitive structural relay, with independent evaluation and governance gates between experimentation and deployment.*
+
+---
+
 ## 5. Structural Representation of Adversarial Scenarios
 
 A security scenario is not merely a narrative. It is a structured object referencing the trust graph, roles, authorization edges, assets, control boundaries, and time-dependent conditions.

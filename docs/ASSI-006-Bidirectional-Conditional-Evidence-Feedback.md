@@ -190,6 +190,12 @@ If a well-specified probabilistic model exists, posterior odds may be updated us
 
 ---
 
+![Fig-004-BCEF-and-Scoring-Tree-Feedback.png](../figures/Fig-004-BCEF-and-Scoring-Tree-Feedback.png)
+
+*Figure 4. BCEF uses scoped conditional tests to produce traceable evidence impacts on scoring and hypothesis structure, while preserving dependence and authorization boundaries.*
+
+---
+
 ## 5. Proposed typed contracts
 
 The following examples are **illustrative design sketches**, not final normative schemas. The authoritative contract will be developed in `specs/SPEC-003-Bidirectional-IF-and-Evidence-Impact-Contract.md`.

@@ -35,6 +35,10 @@ The architecture commits to:
 
 ## 2. The Grand Architecture: Six Functional Domains
 
+![Fig-001-ASSI-Grand-Architecture.png](../figures/Fig-001-ASSI-Grand-Architecture.png)
+
+*Figure 1. Proposed ASSI grand architecture: structural evidence and adaptive learning inform, but do not override, independently governed authorization and safety enforcement.*
+
 ### Domain D1 — Structural Asset and Trust Intelligence
 
 Constructs a time-aware graph of assets, accounts, wallets, keys, signing services, contracts, identities, roles, organizations, network dependencies, policy authorities, and recovery mechanisms. It captures *who can cause what action under which conditions* and *which components share a failure domain*.
@@ -307,6 +311,14 @@ A candidate must not promote itself. Evaluators must be sufficiently independent
 | I-05 | D5 → D6 | Evaluation and failure traces | Isolation and evaluator independence |
 | I-06 | D6 → D2/D3 | Approved model/test revisions | Versioning, rollback, review |
 | I-07 | D6 → D4 | Proposed policy revisions | Separate governance approval required |
+
+---
+
+![Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png](../figures/Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png)
+
+*Figure 8. Proposed ASSI benchmark families and staged validation roadmap, emphasizing falsifiable hypotheses, independent evaluation, and documented failures.*
+
+---
 
 ### 10.1 Minimal conformance expectations
 

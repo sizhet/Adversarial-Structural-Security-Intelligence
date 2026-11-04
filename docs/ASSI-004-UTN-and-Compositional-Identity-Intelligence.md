@@ -138,6 +138,12 @@ UTN should represent each claim at the appropriate type and relational level.
 
 ---
 
+![Fig-003-UTN-Compositional-Identity-Hypergraph.png](../figures/Fig-003-UTN-Compositional-Identity-Hypergraph.png)
+
+*Figure 3. UTN-typed, time-indexed compositional identity: overlapping participants and shared services support multiple controller hypotheses without implying verified identity or authority.*
+
+---
+
 ## 4. Naming: stable references without premature attribution
 
 A **UTN Name** should denote an explicitly typed referent under a declared scope. Naming is not the same as asserting a real-world identity.

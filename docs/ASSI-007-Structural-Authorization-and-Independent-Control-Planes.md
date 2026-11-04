@@ -152,6 +152,14 @@ Audit + Alert       Soft Evidence Intelligence
 
 The enforcement gateway must revalidate material state changes immediately before execution. A check performed earlier is not sufficient if balances, permissions, nonce, destination, or policy version have changed in the interim.
 
+---
+
+![Fig-005-Structural-Authorization-Control-Plane.png](../figures/Fig-005-Structural-Authorization-Control-Plane.png)
+
+*Figure 5. Structural authorization requires independently enforced policy, transaction binding, and bounded exposure; cryptographic validity alone is insufficient.*
+
+---
+
 ### 5.1 Decision states
 
 A minimal decision vocabulary is:
