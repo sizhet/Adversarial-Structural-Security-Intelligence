@@ -95,6 +95,14 @@ Observations must be tagged with provenance, visibility limits, and their genera
 
 ## 4. UTN Typed Naming Scheme
 
+---
+
+![Fig-003-UTN-Compositional-Identity-Hypergraph.png](../figures/Fig-003-UTN-Compositional-Identity-Hypergraph.png)
+
+*Figure 3. UTN-typed, time-indexed compositional identity: overlapping participants and shared services support multiple controller hypotheses without implying verified identity or authority.*
+
+---
+
 UTN names identify **what kind of object is being referenced**, not what the analyst hopes it represents. Example namespaces:
 
 ```text

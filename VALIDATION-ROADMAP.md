@@ -9,6 +9,14 @@
 
 > **Research boundary:** A valid signature does not prove legitimate authorization. An inferred identity does not confer authority. A passing simulation is not independent validation. Independent validation is not deployment approval. No candidate system may authorize its own promotion.
 
+---
+
+![Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png](../figures/Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png)
+
+*Figure 8. Proposed ASSI benchmark families and staged validation roadmap, emphasizing falsifiable hypotheses, independent evaluation, and documented failures.*
+
+---
+
 ## 1. Mission and scope
 
 This roadmap turns the research agenda in [FUTURE-DIRECTIONS.md](FUTURE-DIRECTIONS.md), the question register in [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md), and the thirty preregistration candidates in [TESTABLE-HYPOTHESES.md](TESTABLE-HYPOTHESES.md) into an auditable validation program. The objective is not to maximize a single security score. It is to discover **which structural mechanisms work, against which specified baselines and threat models, under what assumptions, with which failure modes, and at what operational and governance cost**.

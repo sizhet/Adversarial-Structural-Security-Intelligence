@@ -99,6 +99,12 @@ If the PEP is bypassable, if a signing key alone can move assets without the gat
 
 ---
 
+![Fig-005-Structural-Authorization-Control-Plane.png](../figures/Fig-005-Structural-Authorization-Control-Plane.png)
+
+*Figure 5. Structural authorization requires independently enforced policy, transaction binding, and bounded exposure; cryptographic validity alone is insufficient.*
+
+---
+
 ## 4. Structural Trust and Authorization Architecture
 
 ```text

@@ -97,6 +97,14 @@ The generator maintains four partitions: **development**, **validation**, **seal
 
 ## 4. Four Drives: Authority, Inputs and Outputs
 
+---
+
+![Fig-006-Adversarial-Drives-and-Competitive-Relay.png](../figures/Fig-006-Adversarial-Drives-and-Competitive-Relay.png)
+
+*Figure 6. Four-drive adversarial research and competitive structural relay, with independent evaluation and governance gates between experimentation and deployment.*
+
+---
+
 ### 4.1 Red Drive — authorized adversarial hypothesis discovery
 
 The Red Drive explores abstract, authorized scenario perturbations: a synthetic signer is marked compromised; a shared service creates ambiguous identity evidence; a replayed request challenges idempotency; a concurrent request challenges budget accounting; or a delayed observation challenges temporal reasoning. It emits a typed **Scenario Proposal** and **Expected Failure Claim**. It has no real network targets, keys, or production access.

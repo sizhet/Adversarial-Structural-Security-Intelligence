@@ -110,6 +110,14 @@ Each term is evaluated under a versioned decision context `c`. The expression is
   approval authorities, recovery, and independent evaluation.
 ```
 
+---
+
+![Fig-005-Structural-Authorization-Control-Plane.png](../figures/Fig-005-Structural-Authorization-Control-Plane.png)
+
+*Figure 5. Structural authorization requires independently enforced policy, transaction binding, and bounded exposure; cryptographic validity alone is insufficient.*
+
+---
+
 ### 3.2 Separation requirements
 
 **AUTH-PLANE-001.** The adaptive intelligence plane MUST NOT have direct write access to protected policy, entitlement, approval, exposure-budget, or enforcement state.

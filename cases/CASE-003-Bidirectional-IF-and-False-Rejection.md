@@ -16,6 +16,12 @@ Security intelligence frequently encounters observations that contradict a curre
 
 ---
 
+![Fig-004-BCEF-and-Scoring-Tree-Feedback.png](../figures/Fig-004-BCEF-and-Scoring-Tree-Feedback.png)
+
+*Figure 4. BCEF uses scoped conditional tests to produce traceable evidence impacts on scoring and hypothesis structure, while preserving dependence and authorization boundaries.*
+
+---
+
 ## 1. Research Problem and Scope
 
 ### 1.1 The failure mode

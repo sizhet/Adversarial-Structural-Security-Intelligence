@@ -20,6 +20,12 @@ The specification defines experiment authorization, scenario manifests, isolatio
 
 ---
 
+![Fig-006-Adversarial-Drives-and-Competitive-Relay.png](../figures/Fig-006-Adversarial-Drives-and-Competitive-Relay.png)
+
+*Figure 6. Four-drive adversarial research and competitive structural relay, with independent evaluation and governance gates between experimentation and deployment.*
+
+---
+
 ## 1. Scope and Normative Conventions
 
 ### 1.1 In scope

@@ -118,6 +118,14 @@ G_{t,c}=(V,E,\mathcal H,\tau,\pi),
 
 where `V` contains typed objects and candidate entities; `E` contains typed binary relations; `\mathcal H` contains n-ary composition or coordination relations; `\tau` carries event, observation, and validity times; and `\pi` carries provenance, scope, and epistemic state. A hyperedge may represent joint authorization by three signers, a rotating team, or a shared operational service. A graph-only implementation MAY reify hyperedges as typed relation nodes, provided membership, role, and time semantics are preserved.
 
+---
+
+![Fig-003-UTN-Compositional-Identity-Hypergraph.png](../figures/Fig-003-UTN-Compositional-Identity-Hypergraph.png)
+
+*Figure 3. UTN-typed, time-indexed compositional identity: overlapping participants and shared services support multiple controller hypotheses without implying verified identity or authority.*
+
+---
+
 ### 4.2 Composition semantics
 
 A composition is not automatically a set-theoretic union of stable identities. It MUST define:

@@ -19,6 +19,12 @@ The central objective is not unbounded autonomous optimization. It is **governed
 
 ---
 
+![Fig-007-Security-Residual-to-Validated-RSI.png](../figures/Fig-007-Security-Residual-to-Validated-RSI.png)
+
+*Figure 7. Validated security RSI converts residuals into testable questions and governed improvements; unvalidated candidates remain outside production authority.*
+
+---
+
 ## 1. Scope, Normative Language, and Boundaries
 
 ### 1.1 Scope

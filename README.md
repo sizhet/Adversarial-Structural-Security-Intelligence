@@ -64,6 +64,11 @@ Structural Relay & knowledge base         Bounded consequential action
 
 **Structural Security Units (SSUs)** provide a typed, versioned, auditable interchange layer for observations, hypotheses, test results, authorization requests, adversarial scenarios, residuals, validation records, and governance decisions. The six specifications under [`specs/`](specs/) define proposed contracts and conformance requirements. They are research drafts, not an implemented standard.
 
+![Fig-001-ASSI-Grand-Architecture.png](figures/Fig-001-ASSI-Grand-Architecture.png)
+    
+*Figure 1. Proposed ASSI grand architecture: structural evidence and adaptive learning inform, but do not override, independently governed authorization and safety enforcement.*
+
+
 ### Major mechanisms
 
 | Mechanism | Role | Boundary / caution |

@@ -14,6 +14,12 @@ ASSI is **not** a claim that an AI security system has been implemented or prove
 
 ---
 
+![Fig-002-Four-Structural-Security-Contradictions.png](figures/Fig-002-Four-Structural-Security-Contradictions.png)
+
+*Figure 2. Four interacting contradictions in cryptocurrency security: local cryptographic validity does not resolve system-level trust, identity, liquidity, and governance risks.*
+
+---
+
 ## 1. The research problem in three minutes
 
 A digital system may pass a local check yet still behave insecurely at the structural level:
