@@ -1,205 +1,242 @@
-# Adversarial Structural Security Intelligence (ASSI)
+# D-BTP — Dynamic Bucket Tree of Permutation
 
-**Research foundation · v0.1.0 · Open research / collective learning**
+## Directional Structural Generation and Hypothesis Evolution
 
-> **Cryptographic validity is not structural security.** A technically valid signature, a plausible identity inference, or a high confidence score is not, by itself, sufficient authorization for a consequential action.
+**Research framework · Version 1.0.0 (proposed) · Apache-2.0**
 
-**ASSI (Adversarial Structural Security Intelligence)** is a specification-first research program for understanding, testing, and improving security in systems where identities, evidence, authority, incentives, and dependencies change over time. Cryptocurrency custody and exchange operations provide an initial motivating setting; the intended research scope also includes cloud infrastructure, enterprise authorization, AI agents, software supply chains, and other multi-actor systems.
+> **Research status:** This repository presents a conceptual architecture, formalization proposals, implementation contracts, and falsifiable research hypotheses. It does **not** claim a validated general-purpose solver, demonstrated recursive self-improvement, or established superiority over existing search methods.
 
-ASSI combines structural identity modeling, directional evidence, conditional hypothesis testing, independent safety controls, adversarial experiments, and governed learning. Its central engineering distinction is between **adaptive security intelligence**, which may discover and recommend, and **independently enforced authority**, which alone may permit consequential actions.
+## 1. Overview
 
-**Research status:** This repository presents architectural proposals, draft contracts, synthetic case studies, and falsifiable experimental designs. It does **not** claim a deployed security product, completed benchmark results, independently verified performance improvements, or formal security certification.
+The **Dynamic Bucket Tree of Permutation (D-BTP)** extends Bucket Tree of Permutation (BTP) from structural matching and metric similarity toward **dynamic, constraint-guided structural hypothesis search**. Rather than assuming that every possible candidate relation is enumerated before search, D-BTP treats the search state as evolving: accepting, rejecting, or deferring a hypothesis may change what candidates can be discovered next.
 
-## 1. Why ASSI?
+A second, central idea is that **directional fields couple generation and selection**. Directional signals do not merely rank a fixed list after generation; they can influence which candidates are proposed, which hypotheses receive attention, which evidence is sought, and how limited computation is allocated. Search outcomes and independently checked evidence may, in turn, update these directional fields.
 
-Security failures can arise even when local technical checks pass. A cryptographic signature may be valid while the transaction intent is unauthorized; multiple on-chain addresses may appear related without identifying a single human controller; apparently independent observations may share the same upstream source; a defense may succeed in one simulation while failing under different assumptions; and iterative improvements may gradually widen privileges without an obvious single dangerous change.
+D-BTP is intended as a **research architecture**, not a universal claim about how intelligence or biological cognition works. Its potential value depends on well-defined constraints, calibrated evidence, appropriate baselines, and reproducible experiments.
 
-ASSI investigates four recurring tensions:
+## 2. Research Motivation
 
-1. **Control versus autonomy:** useful automation must not acquire unreviewed authority.
-2. **Identity versus authorization:** observed behavior or inferred control does not establish a legitimate right to act.
-3. **Efficiency versus safety:** operational speed and liquidity can enlarge reachable loss exposure.
-4. **Evolution versus stability:** continuous learning must preserve independent safety boundaries and accountable governance.
+The starting point is structural similarity between two starmaps, including unaligned correspondence problems. A conventional formulation can represent a search over a known set of possible node pairs and test combinations for consistency. But many practical problems are not naturally fixed-candidate problems:
 
-These tensions are not assumed to be eliminable. The objective is to make them explicit, measurable, and governable.
+- New candidate relationships become visible only after partial structural decisions.
+- A single latent actor may explain multiple observable behaviors, requiring non-bijective mappings.
+- Partial observations provide weak but useful signals about where to explore next.
+- Competing hypotheses must coexist until discriminating evidence becomes available.
+- Search policies and structural operators may themselves become objects of experimentation and improvement.
 
-## 2. Research principles
+D-BTP separates **what is feasible**, **what is plausible**, and **what is worth exploring next**. Conflating these questions risks unsound pruning, premature consensus, and overconfident attribution.
 
-- **Cryptographic validity ≠ legitimate intent ≠ acceptable exposure.** Each requires a distinct check.
-- **Identity is compositional, temporal, and hypothesis-dependent.** Persons, teams, services, and coalitions may overlap and change.
-- **Evidence is not authority.** A model's inference cannot confer permissions or override a protected policy.
-- **Contradictions are hypothesis-scoped.** Evidence against one-person control does not automatically disprove team control.
-- **Direction and provenance matter.** Similarity, directional relevance, source quality, and evidence dependence must be distinguished.
-- **Feedback should be structural.** A test can revise a score, split a hypothesis, reclassify a relationship, or request evidence; it must not silently promote an inference to a fact.
-- **Bounded loss before perfect defense.** Independent controls and recoverability remain necessary when intelligence is wrong.
-- **Simulation is not validation; validation is not deployment approval.** Independent evaluation and governance are separate gates.
-- **Failures are reusable research artifacts.** Security Residuals, negative transfers, and inconclusive results belong in the structural learning record.
+## 3. Core Mechanism
 
-## 3. Architecture at a glance
+A dynamic bucket at step *t* may be abstracted as:
+
+\[
+B_t = (H_t, S_t, E_t, D_t, M_t)
+\]
+
+where:
+
+- **Hₜ — hypothesis ledger:** accepted, rejected, pending, and deferred structural hypotheses.
+- **Sₜ — structural state:** current mappings, relations, constraints, and derived implications.
+- **Eₜ — evidence state:** supporting and countervailing observations, provenance, reliability, and dependencies.
+- **Dₜ — directional state:** objectives, scoring perspectives, uncertainty, and search-control policy.
+- **Mₜ — metadata:** versions, budgets, lineage, termination status, and reproducibility information.
+
+Candidates are generated from the current state rather than assumed to be a complete immutable input:
+
+\[
+C_t = G(B_t;\,\theta_G,\mathcal{R}_t)
+\]
+
+A candidate is assessed against hard constraints and, when admissible, may be ranked using soft evidence and directional objectives. The system then branches, propagates constraints, acquires further evidence when justified, and updates its state. This is a **coupled loop**:
+
+**State → Candidate generation → Constraint validation → Directional selection → Evidence/feedback → Updated state and guidance.**
+
+The loop must distinguish *logical infeasibility* from *low search priority*. A weak directional signal can reorder exploration, but cannot by itself prove a candidate impossible.
+
+![Fig-001-D-BTP-Grand-Architecture.png](figures/Fig-001-D-BTP-Grand-Architecture.png)
+
+*Fig-001. D-BTP grand architecture. A dynamic bucket maintains structural hypotheses and evidence; state-dependent candidate generation, constraint validation, directional search control, and feedback jointly govern exploration. Structural relay and learning may operate across search episodes.*
+
+## 4. Design Principles
+
+1. **Dynamic generation, not necessarily exhaustive upfront enumeration.** Search must record what has and has not been explored.
+2. **Constraint soundness before heuristic efficiency.** Hard rejection requires a valid constraint basis; unknown and plugin errors are not automatic failures.
+3. **Generation–selection coupling.** Directional fields influence both the candidate frontier and allocation of attention.
+4. **Weak evidence is guidance, not proof.** Track provenance, dependence, counterevidence, and calibration.
+5. **Competing hypotheses remain first-class.** Preserve useful diversity rather than equating agent consensus with truth.
+6. **Relay requires independent validation.** Receiving a structural unit does not confer correctness.
+7. **Learning and RSI are distinct claims.** State iteration, adaptive tuning, collective learning, and validated self-improvement require different evidence.
+8. **Explicit limits and leftovers.** Report quiescence, conditional closure, budget exhaustion, unresolved alternatives, and failure modes separately.
+
+## 5. Architecture at a Glance
 
 ```text
-          Observed events / systems / dependencies
-                            |
-               Typed structural representation
-             UTN + temporal/compositional identity
-                            |
-             Evidence, hypotheses, provenance
-                    REN + MDT + BCEF
-                            |
-             Candidate findings and proposals
-                            |
-       +--------------------+--------------------+
-       |                                         |
-       v                                         v
-Adaptive intelligence & experiments      Independent safety plane
-AQSI / Red / Blue / Evaluation           Policy / authorization / risk
-Security Residual / Validated RSI        Enforcement / recovery / audit
-       |                                         |
-       v                                         v
-Structural Relay & knowledge base         Bounded consequential action
-       |                                         ^
-       +--- independently validated proposals --+
-             (only through governance gates)
+Structural problem / starmaps / observations
+                   |
+                   v
+          Dynamic Bucket State
+          (hypotheses, constraints,
+           evidence, directions)
+                   |
+          +--------+---------+
+          |                  |
+          v                  v
+  Candidate generation   Directional field
+          |              (guides generation,
+          |               selection, budgets)
+          v                  |
+  Constraint plugins <------+ 
+          |
+   admissible candidates
+          |
+          v
+  Branching / selection / portfolio
+          |
+          v
+  Evidence and feedback evaluation
+          |
+          +----> update state and guidance
+          |
+          v
+  Structural Relay / Collective Learning
+          |
+          v
+  Validated operator or policy proposals
+  (subject to independent evaluation)
 ```
 
-**Structural Security Units (SSUs)** provide a typed, versioned, auditable interchange layer for observations, hypotheses, test results, authorization requests, adversarial scenarios, residuals, validation records, and governance decisions. The six specifications under [`specs/`](specs/) define proposed contracts and conformance requirements. They are research drafts, not an implemented standard.
+This diagram is explanatory; actual implementations may use asynchronous agents, multiple frontiers, or different scheduling policies.
 
-### Major mechanisms
+## 6. Repository Map
 
-| Mechanism | Role | Boundary / caution |
-|---|---|---|
-| **UTN — Universal Typing and Naming** | Typed naming and compositional, time-dependent identity hypotheses | Observed address ≠ verified controller ≠ authorized subject |
-| **REN — Relational Evidence Navigation** | Directional weak-evidence assessment and alternative-hypothesis navigation | Correlated evidence must not be counted as independent confirmation |
-| **MDT — Metric Differential Tree** | Structural differences, time-indexed changes, and revisions | A structural change requires provenance and scope |
-| **BCEF — Bidirectional Conditional Evidence Feedback** | Forward, reverse, counterfactual, and contradiction IF tests with structured impact | Reverse implication is not automatically valid; contradictions remain hypothesis-scoped |
-| **Independent Safety Control Plane** | Policy decision/enforcement, transaction binding, exposure budgets, recovery | Adaptive scores cannot bypass independent authorization |
-| **Adversarial Drives** | Red, Blue, Evaluation, and Governance roles for bounded experiments | Evaluation and approval are not interchangeable |
-| **AQSI / Validated RSI** | Generate research questions and test candidate improvements | No self-approval, unbounded recursion, or autonomous privilege expansion |
-| **Structural Relay** | Preserve verified knowledge, residuals, uncertainty, and negative results | Relay acceptance is not evidence validation |
+### Foundations — conceptual and algorithmic basis
 
-## 4. Research program and reading paths
+| Document | Focus |
+|---|---|
+| [D-BTP-001](docs/foundations/D-BTP-001-From-Metric-Similarity-to-Structural-Hypothesis-Search.md) | From metric similarity and unaligned matching to structural hypothesis search |
+| [D-BTP-002](docs/foundations/D-BTP-002-Dynamic-Bucket-States-and-Candidate-Generation.md) | Dynamic bucket states, transitions, and state-driven candidates |
+| [D-BTP-003](docs/foundations/D-BTP-003-Constraint-Guided-Structural-Composition.md) | Constraint propagation, composition, and sound pruning |
+| [D-BTP-004](docs/foundations/D-BTP-004-Directional-Fields-for-Generation-and-Selection.md) | Directional guidance for generation and selection |
+| [D-BTP-005](docs/foundations/D-BTP-005-Weak-Evidence-and-Directional-Exploration.md) | Weak evidence, counterevidence, and exploration value |
+| [D-BTP-006](docs/foundations/D-BTP-006-Coupled-Generation-Selection-and-Feedback.md) | Unified generation–selection–feedback loop |
+| [D-BTP-007](docs/foundations/D-BTP-007-Multi-Agent-RSI-and-Collective-Structural-Learning.md) | Multi-agent competition, relay, and controlled learning |
+| [D-BTP-008](docs/foundations/D-BTP-008-Open-Ended-Structural-Evolution-and-Intelligence.md) | Open-ended structural growth and its limits |
 
-The **27 core research documents** are organized as 12 articles, 6 draft specifications, 5 synthetic cases, and 4 extensions. A reader may begin with the overview and proceed through one of three paths:
+### Specifications — proposed contracts, not certified standards
 
-- **Conceptual:** ASSI-001 → ASSI-002 → ASSI-004 → ASSI-006 → ASSI-007 → ASSI-010 → ASSI-012.
-- **Engineering / contracts:** ASSI-010 → SPEC-001 → SPEC-002 → SPEC-003 → SPEC-004 → SPEC-005 → SPEC-006.
-- **Experimental / falsification:** ASSI-011 → CASE-001 → CASE-002 → CASE-003 → CASE-004 → CASE-005 → VALIDATION-ROADMAP (when published).
+| Document | Focus |
+|---|---|
+| [SPEC-001](docs/specifications/SPEC-001-Dynamic-Bucket-State-Contract.md) | Bucket state, lifecycle, provenance, and invariants |
+| [SPEC-002](docs/specifications/SPEC-002-Candidate-Generation-and-Constraint-Plugins.md) | Generator and constraint-plugin interfaces |
+| [SPEC-003](docs/specifications/SPEC-003-Directional-Scoring-and-Search-Control.md) | Multi-objective scoring and control plane |
+| [SPEC-004](docs/specifications/SPEC-004-Evidence-Relay-and-Learning-Lifecycle.md) | Evidence lifecycle, structural relay, and learning governance |
 
-### A. Core research articles (`docs/`)
+### Cases — illustrative, not empirical validation
 
-| ID | Document | Focus |
-|---|---|---|
-| ASSI-001 | [From Cryptographic Validity to Structural Security](docs/ASSI-001-From-Cryptographic-Validity-to-Structural-Security.md) | Why local technical validity is insufficient |
-| ASSI-002 | [Four Structural Contradictions of Cryptocurrency Security](docs/ASSI-002-Four-Structural-Contradictions-of-Cryptocurrency-Security.md) | Fundamental security tensions |
-| ASSI-003 | [Trust Relocation and Structural Security Boundaries](docs/ASSI-003-Trust-Relocation-and-Structural-Security-Boundaries.md) | Trust movement and control boundaries |
-| ASSI-004 | [UTN and Compositional Identity Intelligence](docs/ASSI-004-UTN-and-Compositional-Identity-Intelligence.md) | Temporal and multi-actor identity |
-| ASSI-005 | [REN and Directional Weak Evidence Intelligence](docs/ASSI-005-REN-and-Directional-Weak-Evidence-Intelligence.md) | Directional evidence and provenance |
-| ASSI-006 | [Bidirectional Conditional Evidence Feedback](docs/ASSI-006-Bidirectional-Conditional-Evidence-Feedback.md) | Four IF modes and structural impact |
-| ASSI-007 | [Structural Authorization and Independent Control Planes](docs/ASSI-007-Structural-Authorization-and-Independent-Control-Planes.md) | Independent permission and loss controls |
-| ASSI-008 | [Adversarial Security Drives and Competitive Relay](docs/ASSI-008-Adversarial-Security-Drives-and-Competitive-Relay.md) | Red/Blue/Evaluation/Governance |
-| ASSI-009 | [Security Residuals and Validated Recursive Self-Improvement](docs/ASSI-009-Security-Residuals-and-Validated-Recursive-Self-Improvement.md) | Failure-to-learning lifecycle |
-| ASSI-010 | [ASSI Grand Architecture and Structural Security Units](docs/ASSI-010-ASSI-Grand-Architecture-and-Structural-Security-Units.md) | Integrated architecture and SSUs |
-| ASSI-011 | [Benchmark Laboratories and Falsifiable Security Hypotheses](docs/ASSI-011-Benchmark-Laboratories-and-Falsifiable-Security-Hypotheses.md) | Experimental design and baselines |
-| ASSI-012 | [From Cryptocurrency Security to General Structural Defense](docs/ASSI-012-From-Cryptocurrency-Security-to-General-Structural-Defense.md) | Cross-domain generalization and limits |
+| Document | Focus |
+|---|---|
+| [CASE-001](docs/cases/CASE-001-Blockchain-Actor-Attribution.md) | Latent behavioral actors and observable blockchain activity |
+| [CASE-002](docs/cases/CASE-002-Dynamic-Starmap-Similarity.md) | Dynamic vs. fixed-candidate structural matching |
+| [CASE-003](docs/cases/CASE-003-Multi-Agent-Hypothesis-Competition.md) | Competing explanations, counterevidence, and portfolios |
 
-### B. Draft specifications (`specs/`)
+### Extensions — exploratory research directions
 
-| ID | Document | Contract |
-|---|---|---|
-| SPEC-001 | [Structural Security Unit Contract](specs/SPEC-001-Structural-Security-Unit-Contract.md) | Canonical SSU envelope, provenance, lifecycle |
-| SPEC-002 | [Compositional Identity and UTN Contract](specs/SPEC-002-Compositional-Identity-and-UTN-Contract.md) | Typed identities, temporal composition, merge/split |
-| SPEC-003 | [Bidirectional IF and Evidence Impact Contract](specs/SPEC-003-Bidirectional-IF-and-Evidence-Impact-Contract.md) | Conditional tests and controlled feedback |
-| SPEC-004 | [Authorization and Safety Control Contract](specs/SPEC-004-Authorization-and-Safety-Control-Contract.md) | Independent PDP/PEP, risk budgets, recovery |
-| SPEC-005 | [Adversarial Drive and Relay Contract](specs/SPEC-005-Adversarial-Drive-and-Relay-Contract.md) | Experiment roles, isolation, relay, evaluation |
-| SPEC-006 | [Validated RSI and Governance Contract](specs/SPEC-006-Validated-RSI-and-Governance-Contract.md) | Independent validation, promotion, rollback |
+| Document | Focus |
+|---|---|
+| [EXT-001](docs/extensions/EXT-001-Biomimetic-Directional-Intelligence.md) | Functional analogies to biological exploration |
+| [EXT-002](docs/extensions/EXT-002-Recursive-Directional-Field-Evolution.md) | Directional fields as evolvable objects |
+| [EXT-003](docs/extensions/EXT-003-Open-Ended-BTP-and-Structural-Relay.md) | Structural invention, relay, and open-ended growth |
 
-### C. Synthetic cases (`cases/`)
+### Figures
 
-| ID | Document | Research scenario |
-|---|---|---|
-| CASE-001 | [Cryptocurrency Trust and Liquidity](cases/CASE-001-Cryptocurrency-Trust-and-Liquidity.md) | Liquidity versus reachable exposure |
-| CASE-002 | [UTN On-Chain Identity Sandbox](cases/CASE-002-UTN-On-Chain-Identity-Sandbox.md) | Compositional identity with synthetic ground truth |
-| CASE-003 | [Bidirectional IF and False Rejection](cases/CASE-003-Bidirectional-IF-and-False-Rejection.md) | Scope-aware contradiction and scoring revisions |
-| CASE-004 | [Compromised Signing-Service Defense](cases/CASE-004-Compromised-Signing-Service-Defense.md) | Valid signatures with unauthorized intent |
-| CASE-005 | [Adversarial Drives and Security RSI](cases/CASE-005-Adversarial-Drives-and-Security-RSI.md) | Multi-round experiments and validated learning |
+The planned eight-figure sequence is:
 
-**Case studies describe proposed synthetic laboratories, not documented real-world incidents or completed experimental results.**
+1. [Fig-001 — Grand Architecture](figures/Fig-001-D-BTP-Grand-Architecture.png)
+2. [Fig-002 — From Static to Dynamic BTP](figures/Fig-002-From-Static-to-Dynamic-BTP.png)
+3. [Fig-003 — Dynamic Bucket State and Candidate Generation](figures/Fig-003-Dynamic-Bucket-State-and-Candidate-Generation.png)
+4. [Fig-004 — Constraint-Guided Structural Hypothesis Search](figures/Fig-004-Constraint-Guided-Structural-Hypothesis-Search.png)
+5. [Fig-005 — Directional Generation and Selection Coupling](figures/Fig-005-Directional-Generation-and-Selection-Coupling.png)
+6. [Fig-006 — Weak Evidence and Multi-Directional Scoring](figures/Fig-006-Weak-Evidence-and-Multi-Directional-Scoring.png)
+7. [Fig-007 — Blockchain Actor Attribution BTP](figures/Fig-007-Blockchain-Actor-Attribution-BTP.png)
+8. [Fig-008 — Recursive Structural Evolution and Collective Learning](figures/Fig-008-Recursive-Structural-Evolution-and-Collective-Learning.png)
 
-### D. Research extensions (`extensions/`)
+**Assembly note:** The figure links assume the eight illustrations have been saved as separate PNG files at the paths above. A single composite poster does not satisfy those individual paths; split/export and verify the files before publication.
 
-| ID | Document | Direction |
-|---|---|---|
-| EXT-001 | [Multi-Agent Adversarial Security Ecology](extensions/EXT-001-Multi-Agent-Adversarial-Security-Ecology.md) | Multi-agent competition, cooperation, common failures |
-| EXT-002 | [Autonomous Security Questioning and Exploration](extensions/EXT-002-Autonomous-Security-Questioning-and-Exploration.md) | AQSI question units and bounded exploration |
-| EXT-003 | [Cross-Domain Structural Security Transfer](extensions/EXT-003-Cross-Domain-Structural-Security-Transfer.md) | Typed transfer, domain adapters, negative transfer |
-| EXT-004 | [Open-Ended Security Evolution and Governance](extensions/EXT-004-Open-Ended-Security-Evolution-and-Governance.md) | Authority drift and governance of evolution |
+## 7. Suggested Reading Paths
 
-## 5. Figures
+**New readers:** [START-HERE.md](START-HERE.md) → D-BTP-001 → D-BTP-002 → D-BTP-004 → D-BTP-006 → CASE-002.
 
-The planned illustration set is located under `figures/`:
+**Algorithm and implementation researchers:** D-BTP-002 → D-BTP-003 → SPEC-001 → SPEC-002 → SPEC-003 → SPEC-004.
 
-1. `Fig-001-ASSI-Grand-Architecture.png`
-2. `Fig-002-Four-Structural-Security-Contradictions.png`
-3. `Fig-003-UTN-Compositional-Identity-Hypergraph.png`
-4. `Fig-004-BCEF-and-Scoring-Tree-Feedback.png`
-5. `Fig-005-Structural-Authorization-Control-Plane.png`
-6. `Fig-006-Adversarial-Drives-and-Competitive-Relay.png`
-7. `Fig-007-Security-Residual-to-Validated-RSI.png`
-8. `Fig-008-ASSI-Benchmark-and-Validation-Roadmap.png`
+**Weak-evidence and attribution researchers:** D-BTP-005 → SPEC-003 → CASE-001. Treat inferred behavioral entities as hypotheses, not automatically identified people.
 
-> **Publication check:** Verify that all eight standalone image files are present under these exact filenames before enabling image embeds or publishing a release. A composite infographic does not by itself satisfy eight separate file paths.
+**Multi-agent and evolution researchers:** D-BTP-007 → CASE-003 → EXT-002 → EXT-003.
 
-## 6. Benchmarks and falsifiable hypotheses
+For an exhaustive index, see [CONTENTS.md](CONTENTS.md). For definitions, see [GLOSSARY.md](GLOSSARY.md).
 
-ASSI proposes four primary benchmark families:
+## 8. Evaluation Agenda
 
-| Benchmark | Target | Example metrics |
-|---|---|---|
-| **BM-001: Compositional Identity** | Distinguish individuals, teams, shared services, and temporal changes | False merge/split rates; temporal consistency |
-| **BM-002: BCEF Evidence Revision** | Test scoped contradiction and dependency-aware feedback | False rejection; correct rejection; scope leakage |
-| **BM-003: Authorization and Bounded Loss** | Contain unauthorized execution despite compromised components | Unauthorized exposure; false blocks; latency; recovery |
-| **BM-004: Adversarial Relay and Validated RSI** | Assess multi-round improvements and out-of-distribution robustness | Residual recurrence; generalization; governance violations |
+The central questions are empirical and comparative:
 
-The expected validation sequence is **contract conformance → controlled baselines → component ablations → adversarial scenarios → independent evaluation → reproducibility → narrowly governed pilots, if justified**. Improvements are hypotheses until demonstrated with appropriate controls and disclosed limitations.
+- Does state-driven generation improve useful candidate discovery over a fixed-candidate baseline under matched resource budgets?
+- Do directional fields improve time-to-quality, evidence efficiency, or hypothesis recall without increasing false rejection?
+- What is the incremental benefit of constraint propagation, adaptive guidance, multi-agent diversity, and feedback learning?
+- Under what regimes do coordination overhead, evidence dependence, or candidate explosion negate these gains?
+- Can learned operators or directional policies transfer to held-out tasks and remain beneficial after independent verification?
 
-## 7. Safety, scope, and responsible experimentation
+Suggested baselines include **static BTP**, **dynamic unguided search**, **dynamic search with fixed directional scoring**, and **dynamic search with adaptive feedback**, with additional multi-agent variants. Measure wall-clock time, compute cost, constraint violations, hypothesis quality, calibration, diversity, reproducibility, and negative-transfer rates. Report both successes and failure cases.
 
-ASSI is intended for defensive research and authorized evaluation. Synthetic identities, simulated transactions, isolated infrastructure, and non-production datasets are preferred for early tests. Any experiment involving real assets, credentials, third-party systems, or production services requires explicit authorization, containment, resource limits, auditability, and recovery plans.
+Supporting research planning documents: [TESTABLE-HYPOTHESES.md](TESTABLE-HYPOTHESES.md), [VALIDATION-ROADMAP.md](VALIDATION-ROADMAP.md), and [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md).
 
-In particular:
+## 9. Boundaries and Responsible Use
 
-- No inferred identity or confidence score automatically grants access.
-- No AI-generated candidate may approve its own deployment or alter protected safety policy.
-- A sandbox result does not establish a production loss bound.
-- Independent controls must cover every consequential execution path; shared administrative compromise and bypass paths remain explicit failure hypotheses.
-- Negative results, uncertainty, and unsuccessful transfer attempts should be documented rather than suppressed.
+**No universal optimality guarantee.** Dynamic hypothesis search can be combinatorial or exponential; any completeness, optimality, or pruning guarantee must state its assumptions.
 
-## 8. Collaboration and research maturity
+**No biological identity claim.** Biomimetic parallels are functional inspirations, not evidence that brains implement BTP.
 
-The repository is designed for **open, low-key, collective learning**. Useful contributions include logical counterexamples, threat-model corrections, contract ambiguities, conformance test vectors, synthetic benchmarks, independent replications, negative results, and proposals that make assumptions or failure boundaries more explicit.
+**No unverified RSI claim.** A system that updates scores, policies, or generators has not thereby demonstrated recursive self-improvement. Claims require held-out evaluation, cost accounting, regression checks, and rollback capability.
 
-Suggested contribution format:
+**No direct real-world identity inference from weak signals.** Blockchain behavior clustering and latent actor modeling are distinct from identifying individuals. IP addresses, public keys, timing patterns, and other signals may be shared, spoofed, proxied, or context-dependent. Privacy, authorization, data minimization, and evidence governance are essential.
 
-1. State the claim or contract clause being tested.
-2. Specify assumptions, actor capabilities, evidence sources, and authorization boundaries.
-3. Provide a reproducible synthetic example or test vector.
-4. Identify the baseline, observable outcome, and potential falsification condition.
-5. Record provenance, limitations, and unresolved Security Residuals.
+**No conflation of confidence and feasibility.** Low-ranked hypotheses may still be feasible; high-ranked hypotheses may still be false. Record uncertainty and preserve counterevidence.
 
-This research foundation is **not** a replacement for established security engineering, audits, formal verification, incident response, or operational governance. The architecture should be judged by reproducible evidence, not by its conceptual completeness.
+## 10. Relationship to the Structural Intelligence Research Ecosystem
 
-## 9. Repository navigation and publication assets
+D-BTP is designed to be interoperable in principle with related structural-intelligence research directions: structural similarity and folding, directional weak-evidence intelligence, control planes and scoring, dynamic intelligence units, Structural Relay, autonomous questioning, multi-agent competition, and collective learning. Such relationships are **proposed conceptual interfaces**, not assertions of completed integration or validated performance.
 
-Additional navigation and release assets are planned or maintained at the repository root: `START-HERE.md`, `CONTENTS.md`, `GLOSSARY.md`, `FIGURE-INDEX.md`, `FUTURE-DIRECTIONS.md`, `OPEN-QUESTIONS.md`, `TESTABLE-HYPOTHESES.md`, `VALIDATION-ROADMAP.md`, `CHANGELOG.md`, `CITATION.cff`, `.zenodo.json`, and `LICENSE`. Release materials are planned under `release/`.
+A practical implementation should define explicit contracts for representations, scoring, evidence, state transitions, and relay before claiming interoperability.
 
-Links above assume the corresponding research files are committed to their designated folders. Verify links, figures, metadata, licensing, and version consistency before creating a tagged release or DOI deposit.
+## 11. Repository Status and Contributions
 
-## 10. License and citation
+This release is planned as a **research-first v1.0.0**: foundations, specifications, illustrative cases, extensions, and publication assets. It need not include a runnable demo to be useful, but claims about runtime behavior remain hypotheses until supported by reproducible implementations and experiments.
 
-**Intended license:** Apache License 2.0. See [`LICENSE`](LICENSE) once the license file has been added to the repository. Until then, this README alone is not a substitute for a complete license grant.
+Contributions are especially welcome in the form of:
 
-Citation metadata will be provided in `CITATION.cff` and `.zenodo.json`. **Do not insert or infer a DOI before one has actually been assigned.** Refer to the specific release version and permanent archive record when available.
+- Counterexamples to proposed invariants or closure conditions.
+- Minimal benchmark problems and controlled comparisons.
+- Alternative candidate-generation, constraint-propagation, and directional-policy contracts.
+- Robust evidence provenance, calibration, and adversarial testing.
+- Independent conformance suites and cross-domain transfer studies.
+
+Please distinguish **specification proposals**, **implemented behavior**, **measured findings**, and **speculative extensions** in all submissions.
+
+## 12. Citation, License, and Publication
+
+- **License:** Apache License 2.0; see [LICENSE](LICENSE) once added to the repository.
+- **Citation metadata:** [CITATION.cff](CITATION.cff) and [.zenodo.json](.zenodo.json) are planned publication assets; verify authors, repository URL, release tag, and DOI before publication.
+- **Release notes:** [publication/GitHub-Release-Notes-v1.0.0.md](publication/GitHub-Release-Notes-v1.0.0.md).
+- **ResearchGate overview:** [publication/D-BTP-v1.0.0-ResearchGate-Overview.pdf](publication/D-BTP-v1.0.0-ResearchGate-Overview.pdf).
+
+**DOI:** To be assigned after an archived release; no DOI is claimed here.
 
 ---
 
-**ASSI research maxim:** *Keep discovery open-ended, evidence revisable, authority bounded, governance accountable, and failure learnable.*
+## 📚 DBM-SI Series Navigation
+
+See:\
+[./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md](./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md)
+
+---
+
+**Core proposition:** *D-BTP investigates whether state-dependent structural generation, constraint-sound composition, directional selection, and validated feedback can form a reusable framework for exploring and evolving structural hypotheses.*
