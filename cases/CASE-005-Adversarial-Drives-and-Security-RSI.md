@@ -892,5 +892,5 @@ Its central design distinction is that **the system may learn about security wit
 
 **Repository placement:** `cases/CASE-005-Adversarial-Drives-and-Security-RSI.md`  
 **Previous case:** `cases/CASE-004-Compromised-Signing-Service-Defense.md`  
-**Next planned series:** `extensions/EXT-001-Multi-Agent-Adversarial-Security-Ecology.md`  
+**Next series:** `extensions/EXT-001-Multi-Agent-Adversarial-Security-Ecology.md`  
 **Release:** ASSI v0.1.0 Research Foundation — synthetic, specification-first, collective-learning-friendly.
