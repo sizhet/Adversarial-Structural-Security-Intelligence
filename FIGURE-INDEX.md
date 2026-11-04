@@ -5,7 +5,7 @@
 **Repository location:** `FIGURE-INDEX.md` (root)  
 **License:** Apache-2.0 (subject to verification of image-asset rights and attribution)  
 
-> **Asset-status notice (important).** The eight names below are the *planned canonical standalone PNG assets*. At the time this index was prepared, the available image artifact was a combined eight-panel infographic, **not eight verified, separately exported PNGs**. The links below describe the intended repository layout; do not treat them as proof that the files already exist. Before release, export and inspect eight individual images, using the exact filenames, and then verify every Markdown link.
+> **Asset-status notice (important).** The eight names below are the *canonical standalone PNG assets*. At the time this index was prepared, the available image artifact was a combined eight-panel infographic, **not eight verified, separately exported PNGs**. The links below describe the intended repository layout; do not treat them as proof that the files already exist. Before release, export and inspect eight individual images, using the exact filenames, and then verify every Markdown link.
 
 ## 1. Purpose and usage
 

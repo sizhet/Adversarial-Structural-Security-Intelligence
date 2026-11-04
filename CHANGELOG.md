@@ -2,7 +2,7 @@
 
 **Project:** Adversarial Structural Security Intelligence (ASSI)  
 **Release track:** Research Foundation  
-**Current planned release:** `v0.1.0`  
+**Current release:** `v0.1.0`  
 **Status:** Initial research documentation; release preparation  
 **License:** Apache-2.0
 

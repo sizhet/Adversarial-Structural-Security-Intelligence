@@ -398,8 +398,6 @@ For each contribution, state assumptions, inputs, methods, expected and observed
 - **Exploratory extensions:** [`extensions/EXT-001`](extensions/EXT-001-Multi-Agent-Adversarial-Security-Ecology.md) through [`extensions/EXT-004`](extensions/EXT-004-Open-Ended-Security-Evolution-and-Governance.md).
 - **Navigation:** [`README.md`](README.md), [`START-HERE.md`](START-HERE.md), [`CONTENTS.md`](CONTENTS.md), [`GLOSSARY.md`](GLOSSARY.md), [`FIGURE-INDEX.md`](FIGURE-INDEX.md).
 
-Links to planned files describe the intended repository layout; verify file presence and path correctness before publishing.
-
 ## 20. Closing research position
 
 ASSI's long-term promise, if supported by future evidence, is not an infallible security oracle. It is a **typed, evidence-aware, adversarially tested, governance-bounded research system** capable of preserving structural knowledge and learning from its failures.

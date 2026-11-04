@@ -141,7 +141,7 @@ The **27 core research documents** are organized as 12 articles, 6 draft specifi
 
 ## 5. Figures
 
-The planned illustration set is located under `figures/`:
+The illustration set is located under `figures/`:
 
 1. `Fig-001-ASSI-Grand-Architecture.png`
 2. `Fig-002-Four-Structural-Security-Contradictions.png`
@@ -195,7 +195,7 @@ This research foundation is **not** a replacement for established security engin
 
 ## 9. Repository navigation and publication assets
 
-Additional navigation and release assets are planned or maintained at the repository root: `START-HERE.md`, `CONTENTS.md`, `GLOSSARY.md`, `FIGURE-INDEX.md`, `FUTURE-DIRECTIONS.md`, `OPEN-QUESTIONS.md`, `TESTABLE-HYPOTHESES.md`, `VALIDATION-ROADMAP.md`, `CHANGELOG.md`, `CITATION.cff`, `.zenodo.json`, and `LICENSE`. Release materials are planned under `release/`.
+Additional navigation and release assets are at the repository root: `START-HERE.md`, `CONTENTS.md`, `GLOSSARY.md`, `FIGURE-INDEX.md`, `FUTURE-DIRECTIONS.md`, `OPEN-QUESTIONS.md`, `TESTABLE-HYPOTHESES.md`, `VALIDATION-ROADMAP.md`, `CHANGELOG.md`, `CITATION.cff`, `.zenodo.json`, and `LICENSE`. Release materials are under `release/`.
 
 Links above assume the corresponding research files are committed to their designated folders. Verify links, figures, metadata, licensing, and version consistency before creating a tagged release or DOI deposit.
 

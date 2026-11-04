@@ -6,7 +6,7 @@
 
 > **Cryptographic validity is not structural security.** Inference is not authorization; a simulation is not validation; validated evidence is not permission to deploy.
 
-This index is the canonical navigation map for the ASSI research repository. It organizes **12 core research articles, 6 specification drafts, 5 synthetic case studies, and 4 extensions** (27 substantive documents), alongside eight planned research figures and publication/navigation materials. File links are relative to the repository root.
+This index is the canonical navigation map for the ASSI research repository. It organizes **12 core research articles, 6 specification drafts, 5 synthetic case studies, and 4 extensions** (27 substantive documents), alongside eight research figures and publication/navigation materials. File links are relative to the repository root.
 
 ## 1. Quick entry points
 
@@ -19,7 +19,7 @@ This index is the canonical navigation map for the ASSI research repository. It 
 | [FIGURE-INDEX.md](FIGURE-INDEX.md) | Figure descriptions and suggested placements *(publication asset)* |
 | [VALIDATION-ROADMAP.md](VALIDATION-ROADMAP.md) | Proposed staged validation program *(publication asset)* |
 
-*Publication asset* indicates an entry in the planned repository structure, not a claim that the file has already been independently verified or released.
+*Publication asset* indicates an entry in the repository structure, not a claim that the file has already been independently verified or released.
 
 ## 2. Core research — `docs/` (ASSI-001–012)
 
