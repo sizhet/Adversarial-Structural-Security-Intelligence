@@ -129,7 +129,7 @@ The canonical GitHub figure path is `figures/Fig-###-Title.png`. When embedding 
 **From a `docs/` article:**
 
 ```markdown
-![Proposed ASSI grand architecture with independent safety enforcement](../figures/Fig-001-ASSI-Grand-Architecture.png)
+![Proposed ASSI grand architecture with independent safety enforcement](figures/Fig-001-ASSI-Grand-Architecture.png)
 
 *Figure 1. Proposed ASSI grand architecture: structural evidence and adaptive learning inform, but do not override, independently governed authorization and safety enforcement.*
 ```
@@ -188,3 +188,4 @@ The figure index is a guide to *recommended* placements, not a claim that the im
 **Research position:** ASSI v0.1.0 is a research foundation comprising architectural hypotheses, draft specifications, and synthetic benchmark designs. The figures support comprehension and navigation; they are not evidence of validated security performance.
 
 **Related navigation:** [README](README.md) · [START-HERE](START-HERE.md) · [CONTENTS](CONTENTS.md) · [GLOSSARY](GLOSSARY.md)
+
