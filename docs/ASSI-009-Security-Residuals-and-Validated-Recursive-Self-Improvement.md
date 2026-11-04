@@ -442,7 +442,7 @@ The design objective is not a self-improving system that declares itself safe. I
 
 ## References and Research Lineage
 
-### Internal ASSI research series (planned or companion manuscripts)
+### Internal ASSI research series
 
 - ASSI-001 — From Cryptographic Validity to Structural Security.
 - ASSI-003 — Trust Relocation and Structural Security Boundaries.
@@ -451,10 +451,10 @@ The design objective is not a self-improving system that declares itself safe. I
 - ASSI-006 — Bidirectional Conditional Evidence Feedback.
 - ASSI-007 — Structural Authorization and Independent Control Planes.
 - ASSI-008 — Adversarial Security Drives and Competitive Relay.
-- ASSI-010 — ASSI Grand Architecture and Structural Security Units (planned).
-- ASSI-011 — Benchmark Laboratories and Falsifiable Security Hypotheses (planned).
-- SPEC-005 — Adversarial Drive and Relay Contract (planned).
-- SPEC-006 — Validated RSI and Governance Contract (planned).
+- ASSI-010 — ASSI Grand Architecture and Structural Security Units.
+- ASSI-011 — Benchmark Laboratories and Falsifiable Security Hypotheses.
+- SPEC-005 — Adversarial Drive and Relay Contract.
+- SPEC-006 — Validated RSI and Governance Contract.
 
 ### External conceptual foundations for future literature review
 

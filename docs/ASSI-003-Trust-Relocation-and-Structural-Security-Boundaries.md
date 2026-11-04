@@ -348,7 +348,7 @@ Recursive self-improvement (RSI) is appropriate only as a **candidate-generation
 
 ## 11. Proposed specifications and conformance criteria
 
-This paper informs the following planned ASSI documents:
+This paper informs the following ASSI documents:
 
 - **SPEC-001 — Structural Security Unit Contract:** typed trust graph, boundary objects, provenance, and exposure attributes.
 - **SPEC-002 — Compositional Identity and UTN Contract:** individual, group, role, coalition, and time-dependent identity hypotheses.

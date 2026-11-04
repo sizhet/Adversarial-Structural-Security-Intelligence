@@ -353,7 +353,7 @@ Much of the underlying technology has established precedents: threat modeling, g
 - **ASSI-009 — Security Residuals and Validated Recursive Self-Improvement:** studies governed improvement loops.
 - **ASSI-010–012:** integrated architecture, benchmarks, and cross-domain transfer.
 
-The corresponding specifications, cases, and validation plans will define concrete contracts and falsifiable acceptance criteria. Cross-references identify planned research components and should not be read as claims that those components are implemented or empirically validated.
+The corresponding specifications, cases, and validation plans will define concrete contracts and falsifiable acceptance criteria. Cross-references identify research components and should not be read as claims that those components are implemented or empirically validated.
 
 ---
 

@@ -470,7 +470,7 @@ Governance decisions should be traceable to accountable human or organizational 
 | ASSI-011 | Benchmark laboratories and falsifiable hypotheses |
 | ASSI-012 | General structural defense and transfer boundaries |
 
-The detailed contracts are planned as SPEC-001–006, and applied demonstrations as CASE-001–005. This document is an integration blueprint, not a substitute for those specifications.
+The detailed contracts are as SPEC-001–006, and applied demonstrations as CASE-001–005. This document is an integration blueprint, not a substitute for those specifications.
 
 ## 19. Open Research Questions
 

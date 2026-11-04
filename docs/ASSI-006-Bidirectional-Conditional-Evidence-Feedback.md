@@ -544,11 +544,11 @@ BCEF's value remains an empirical question. The ASSI research program should jud
 - `docs/ASSI-003-Trust-Relocation-and-Structural-Security-Boundaries.md`
 - `docs/ASSI-004-UTN-and-Compositional-Identity-Intelligence.md`
 - `docs/ASSI-005-REN-and-Directional-Weak-Evidence-Intelligence.md`
-- `docs/ASSI-007-Structural-Authorization-and-Independent-Control-Planes.md` (planned)
-- `specs/SPEC-002-Compositional-Identity-and-UTN-Contract.md` (planned)
-- `specs/SPEC-003-Bidirectional-IF-and-Evidence-Impact-Contract.md` (planned)
-- `cases/CASE-003-Bidirectional-IF-and-False-Rejection.md` (planned)
-- `TESTABLE-HYPOTHESES.md` and `VALIDATION-ROADMAP.md` (planned)
+- `docs/ASSI-007-Structural-Authorization-and-Independent-Control-Planes.md` 
+- `specs/SPEC-002-Compositional-Identity-and-UTN-Contract.md` 
+- `specs/SPEC-003-Bidirectional-IF-and-Evidence-Impact-Contract.md` 
+- `cases/CASE-003-Bidirectional-IF-and-False-Rejection.md` 
+- `TESTABLE-HYPOTHESES.md` and `VALIDATION-ROADMAP.md` 
 
 ### Established research areas to review during validation
 

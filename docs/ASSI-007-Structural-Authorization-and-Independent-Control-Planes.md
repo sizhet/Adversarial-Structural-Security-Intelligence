@@ -452,8 +452,8 @@ The design must be evaluated as a system of interacting controls, not as a promi
 | ASSI-009 | Security Residuals and validated RSI |
 | ASSI-010 | Integration into the ASSI grand architecture |
 | ASSI-011 | Benchmarks and falsifiable validation |
-| SPEC-004 | Normative authorization and safety-control contract (planned) |
-| CASE-004 | Compromised signing-service defensive laboratory (planned) |
+| SPEC-004 | Normative authorization and safety-control contract  |
+| CASE-004 | Compromised signing-service defensive laboratory  |
 
 ASSI-007 is a conceptual and architectural input to `SPEC-004-Authorization-and-Safety-Control-Contract.md`; it is not a substitute for a machine-checkable implementation specification.
 

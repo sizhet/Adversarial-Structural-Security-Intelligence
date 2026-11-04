@@ -553,8 +553,6 @@ Use domain-specific baselines and retraining budgets. Report negative transfer a
 
 ## 19. Relationship to ASSI Specifications and Cases
 
-This paper informs the planned specification and case documents:
-
 | Document | Experimental role |
 |---|---|
 | `SPEC-001-Structural-Security-Unit-Contract.md` | Canonical unit typing, provenance, versioning, and referential integrity |

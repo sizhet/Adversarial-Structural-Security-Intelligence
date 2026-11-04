@@ -203,7 +203,7 @@ This introductory paper defines the problem and overall research contract. Detai
 - **ASSI-011:** Benchmark Laboratories and Falsifiable Security Hypotheses.
 - **ASSI-012:** From Cryptocurrency Security to General Structural Defense.
 
-Normative data and process contracts will be developed separately in `specs/SPEC-001` through `SPEC-006`; case studies and extensions will be developed in their respective directories. The architecture diagram is planned as `figures/Fig-001-ASSI-Grand-Architecture.png`.
+Normative data and process contracts will be developed separately in `specs/SPEC-001` through `SPEC-006`; case studies and extensions will be developed in their respective directories. The architecture diagram is `figures/Fig-001-ASSI-Grand-Architecture.png`.
 
 ## 12. Conclusion
 
