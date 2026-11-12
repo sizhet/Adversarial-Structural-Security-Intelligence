@@ -112,9 +112,9 @@ Aliases MUST specify issuing authority, valid interval, evidence, and the type o
 
 Define an identity model at time `t` and context `c` as:
 
-\[
+$$
 G_{t,c}=(V,E,\mathcal H,\tau,\pi),
-\]
+$$
 
 where `V` contains typed objects and candidate entities; `E` contains typed binary relations; `\mathcal H` contains n-ary composition or coordination relations; `\tau` carries event, observation, and validity times; and `\pi` carries provenance, scope, and epistemic state. A hyperedge may represent joint authorization by three signers, a rotating team, or a shared operational service. A graph-only implementation MAY reify hyperedges as typed relation nodes, provided membership, role, and time semantics are preserved.
 

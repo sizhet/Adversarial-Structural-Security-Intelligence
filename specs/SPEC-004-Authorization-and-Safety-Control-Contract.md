@@ -66,9 +66,9 @@ A valid result for predicate 1 MUST NOT be treated as establishing predicates 2â
 
 A conceptual admissibility condition is:
 
-\[
-\operatorname{Permit}(a,c) = V_{\mathrm{principal}} \land V_{\mathrm{capability}} \land V_{\mathrm{intent}} \land V_{\mathrm{policy}} \land V_{\mathrm{exposure}} \land V_{\mathrm{approvals}} \land V_{\mathrm{execution\ binding}}.
-\]
+$$
+\mathrm{Permit}(a,c) = V_{\mathrm{principal}} \land V_{\mathrm{capability}} \land V_{\mathrm{intent}} \land V_{\mathrm{policy}} \land V_{\mathrm{exposure}} \land V_{\mathrm{approvals}} \land V_{\mathrm{execution\ binding}}.
+$$
 
 Each term is evaluated under a versioned decision context `c`. The expression is a design abstraction, not a claim that all real-world risk can be reduced to Boolean predicates. If any mandatory term is false, the outcome is **DENY**. If mandatory information is missing or a trusted dependency is unavailable, the outcome is **HOLD** or **DENY**, never implicit approval.
 
@@ -265,9 +265,9 @@ SPEC-002 may maintain competing hypotheses that several addresses are operated b
 
 An action's exposure may include:
 
-\[
+$$
 E_{\mathrm{total}} = E_{\mathrm{direct}} + E_{\mathrm{delegated}} + E_{\mathrm{contingent}} + E_{\mathrm{cascade}} - E_{\mathrm{verified\ offsets}}.
-\]
+$$
 
 This is a conceptual decomposition. Components may overlap, and an implementation MUST avoid double counting and unjustified netting. A conservative upper-bound approach SHOULD be used when dependent exposures cannot be estimated reliably.
 
