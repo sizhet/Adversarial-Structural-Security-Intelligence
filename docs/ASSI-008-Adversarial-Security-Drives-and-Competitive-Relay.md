@@ -209,9 +209,7 @@ SSICR-inspired competition is useful when no single defense can cover every thre
 For a defense policy $\pi$, a conceptual objective is:
 
 $$
-\min_{\pi}\; \mathbb{E}[L(\pi)] + \lambda_1 C_{\mathrm{operations}}(\pi)
-+ \lambda_2 C_{\mathrm{false\;blocks}}(\pi)
-+ \lambda_3 C_{\mathrm{recovery}}(\pi),
+\min_{\pi}\; \mathbb{E}[L(\pi)] + \lambda_1 C_{\mathrm{operations}}(\pi) + \lambda_2 C_{\mathrm{false\;blocks}}(\pi) + \lambda_3 C_{\mathrm{recovery}}(\pi),
 $$
 
 subject to independently enforced safety invariants. Expected loss alone is insufficient; evaluation should also measure tail loss and worst-case exposure under the declared threat model.
