@@ -147,7 +147,7 @@ For synchronized changes across three fictional services:
 - $H_3$: independent operators use one shared automation provider;
 - $H_4$: an external scheduled event triggers similar behavior.
 
-A contradiction against $H_1$ must not automatically eliminate $H_2$–$H_4$. The record should state the proposition, role, interval, conditions, and evidence lineage actually tested.
+A contradiction against $H_1$ must not automatically eliminate H_2–H_4. The record should state the proposition, role, interval, conditions, and evidence lineage actually tested.
 
 ### 5.2 Ecological false merge and false split
 
