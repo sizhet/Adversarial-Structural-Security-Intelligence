@@ -64,22 +64,22 @@ All adversarial scenarios in this proposal are synthetic or explicitly authorize
 
 ## 3. Operationalizing Open-Endedness
 
-The term *open-ended* should be measurable rather than rhetorical. Let a research system maintain, at time \(t\):
+The term *open-ended* should be measurable rather than rhetorical. Let a research system maintain, at time $t$:
 
-- \(Q_t\): active, unresolved, and archived security questions;
-- \(R_t\): typed Security Residuals;
-- \(H_t\): competing security hypotheses;
-- \(C_t\): candidate controls and defense strategies;
-- \(V_t\): validation records, including negative results;
-- \(G_t\): independently approved governance and execution constraints.
+- $Q_t$: active, unresolved, and archived security questions;
+- $R_t$: typed Security Residuals;
+- $H_t$: competing security hypotheses;
+- $C_t$: candidate controls and defense strategies;
+- $V_t$: validation records, including negative results;
+- $G_t$: independently approved governance and execution constraints.
 
 An evolution event proposes:
 
-\[
+$$
 (Q_t,R_t,H_t,C_t,V_t) \rightarrow (Q_{t+1},R_{t+1},H_{t+1},C_{t+1},V_{t+1}).
-\]
+$$
 
-The proposal **does not imply** \(G_t \rightarrow G_{t+1}\). A governance transition requires a separate authorization and conformance process.
+The proposal **does not imply** $G_t \rightarrow G_{t+1}$. A governance transition requires a separate authorization and conformance process.
 
 Candidate measures of open-ended learning include:
 
@@ -191,10 +191,10 @@ These questions are more informative than merely asking whether the model can de
 
 Questions should be treated as first-class, versioned Structural Security Units (SSUs). A question portfolio may consider:
 
-\[
+$$
 U(q) = F(\text{expected information gain},\text{risk relevance},
 \text{testability},\text{novelty},\text{diversity},\text{cost},\text{authorization}).
-\]
+$$
 
 This is a conceptual prioritization function, not a calibrated probability or validated optimization formula. No single score should override hard experimentation constraints.
 
@@ -278,15 +278,15 @@ Governance must not be reduced to a model's final “safety score.” It is a se
 
 The phrase *non-bypassable* is meaningful only relative to a stated threat model and a demonstrated enforcement topology. It cannot be asserted universally.
 
-For a proposed protected action \(a\), define a policy check:
+For a proposed protected action $a$, define a policy check:
 
-\[
-\operatorname{Permit}(a) = \operatorname{AuthorizedSubject}(a)
-\land \operatorname{IntentBound}(a)
-\land \operatorname{PolicyAllows}(a)
-\land \operatorname{ExposureWithinBudget}(a)
-\land \operatorname{ExecutionBound}(a).
-\]
+$$
+\mathrm{Permit}(a) = \mathrm{AuthorizedSubject}(a)
+\land \mathrm{IntentBound}(a)
+\land \mathrm{PolicyAllows}(a)
+\land \mathrm{ExposureWithinBudget}(a)
+\land \mathrm{ExecutionBound}(a).
+$$
 
 This is a design sketch, not a complete implementation. A robust system must ensure that every consequential execution path is mediated by an enforcement point, that budgets are enforced atomically under concurrency, and that shared administrative dependencies do not silently defeat independence.
 

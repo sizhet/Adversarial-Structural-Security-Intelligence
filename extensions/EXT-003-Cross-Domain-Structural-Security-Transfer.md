@@ -125,27 +125,27 @@ Every adapter MUST identify its own authoritative sources for identity, entitlem
 
 Let a source domain be
 
-\[
+$$
 D_s=(V_s,E_s,T_s,A_s,O_s,C_s,G_s),
-\]
+$$
 
 and a target domain be
 
-\[
+$$
 D_t=(V_t,E_t,T_t,A_t,O_t,C_t,G_t),
-\]
+$$
 
-where the components represent typed entities, relations, temporal semantics, authorization, observability, consequences, and governance. Let \(K\) be a candidate kernel mechanism and \(\phi\) a **partial, typed mapping** from source structures to target structures.
+where the components represent typed entities, relations, temporal semantics, authorization, observability, consequences, and governance. Let $K$ be a candidate kernel mechanism and $\phi$ a **partial, typed mapping** from source structures to target structures.
 
 A proposed transfer is:
 
-\[
+$$
 \tau=(D_s,D_t,K,\phi,\mathcal A,\mathcal N,\mathcal V),
-\]
+$$
 
-where \(\mathcal A\) is a set of explicit assumptions, \(\mathcal N\) is a set of non-transfer conditions, and \(\mathcal V\) is a target validation plan.
+where $\mathcal A$ is a set of explicit assumptions, $\mathcal N$ is a set of non-transfer conditions, and $\mathcal V$ is a target validation plan.
 
-The mapping is **partial by design**. For some source element \(x\), \(\phi(x)\) may be undefined. Such gaps are first-class results, not errors to be silently patched with guesses.
+The mapping is **partial by design**. For some source element $x$, $\phi(x)$ may be undefined. Such gaps are first-class results, not errors to be silently patched with guesses.
 
 ### 4.1 Three preservation tests
 
@@ -159,9 +159,9 @@ A fourth, separate requirement is **governance preservation**: the transfer proc
 
 Define a qualitative transfer assessment vector:
 
-\[
+$$
 Q(\tau)=(q_{type},q_{relation},q_{time},q_{evidence},q_{authority},q_{consequence},q_{recovery}).
-\]
+$$
 
 This vector is not inherently a probability or a universal scalar. A weighted score may assist research prioritization but **must not substitute for hard safety gates**. An excellent representation match cannot compensate for a missing enforcement boundary.
 
@@ -301,9 +301,9 @@ REN's reusable idea is that evidence relevance depends on a **hypothesis, direct
 
 A target-specific relevance model should record:
 
-\[
+$$
 R_t(e,h,d,c),
-\]
+$$
 
 with provenance, observability, and dependencies. Source-domain weights, thresholds, and empirical calibration must be treated as **unvalidated priors** in the target.
 
@@ -319,12 +319,12 @@ High transaction velocity can indicate liquidity management or abuse. High cloud
 
 BCEF transfers four *methods of inquiry*, not universal implications:
 
-- **Forward IF:** If hypothesis \(H\) holds, what observable evidence \(E\) should follow under specified conditions?
-- **Reverse IF:** Given \(E\), which competing hypotheses explain it, and what discriminates among them?
+- **Forward IF:** If hypothesis $H$ holds, what observable evidence $E$ should follow under specified conditions?
+- **Reverse IF:** Given $E$, which competing hypotheses explain it, and what discriminates among them?
 - **Counterfactual IF:** Under a permitted intervention or simulation, how would outcomes differ if a key condition changed?
 - **Contradiction IF:** Which exact proposition, role, and time interval does the evidence refute?
 
-The logical warning remains fundamental: \(H\Rightarrow E\) does not imply \(E\Rightarrow H\). Transferring an implication from one domain to another requires verifying its premises in the target.
+The logical warning remains fundamental: $H\Rightarrow E$ does not imply $E\Rightarrow H$. Transferring an implication from one domain to another requires verifying its premises in the target.
 
 ### 10.1 Hypothesis-scoped example
 
@@ -350,7 +350,7 @@ The portable principle is **separation of adaptive reasoning from independently 
 
 ### 11.1 Loss bounding
 
-Let \(L_t\) denote target-domain loss under a specified threat model and test horizon. A research objective is to reduce a defined upper-tail measure or bounded exposure subject to acceptable operational availability. A finite, credible loss bound requires assumptions about enforcement coverage, independence, atomic budgets, common-mode compromise, and recovery. If any assumption fails, the bound must be withdrawn or revised.
+Let $L_t$ denote target-domain loss under a specified threat model and test horizon. A research objective is to reduce a defined upper-tail measure or bounded exposure subject to acceptable operational availability. A finite, credible loss bound requires assumptions about enforcement coverage, independence, atomic budgets, common-mode compromise, and recovery. If any assumption fails, the bound must be withdrawn or revised.
 
 ## 12. Four Primary Cross-Domain Laboratories
 

@@ -69,19 +69,19 @@ The following principles constrain every proposed ecological mechanism.
 
 Define a time-indexed ecology:
 
-\[
+$$
 \mathcal{E}_t=(\mathcal{A}_t,\mathcal{R}_t,\mathcal{X}_t,\mathcal{O}_t,\mathcal{P}_t,\mathcal{K}_t,\mathcal{G}_t).
-\]
+$$
 
 Here:
 
-- \(\mathcal{A}_t\): agents and compositional actor hypotheses;
-- \(\mathcal{R}_t\): typed relationships, memberships, delegations, and dependencies;
-- \(\mathcal{X}_t\): protected assets, services, and resources;
-- \(\mathcal{O}_t\): observations and their provenance;
-- \(\mathcal{P}_t\): policy, authorization, and safety constraints;
-- \(\mathcal{K}_t\): knowledge units, questions, residuals, and relay artifacts;
-- \(\mathcal{G}_t\): governance roles, decisions, and accountability records.
+- $\mathcal{A}_t$: agents and compositional actor hypotheses;
+- $\mathcal{R}_t$: typed relationships, memberships, delegations, and dependencies;
+- $\mathcal{X}_t$: protected assets, services, and resources;
+- $\mathcal{O}_t$: observations and their provenance;
+- $\mathcal{P}_t$: policy, authorization, and safety constraints;
+- $\mathcal{K}_t$: knowledge units, questions, residuals, and relay artifacts;
+- $\mathcal{G}_t$: governance roles, decisions, and accountability records.
 
 The model is a **temporal typed hypergraph**, not a presumption that every edge is a verified fact. A relation must declare whether it is observed, derived, hypothesized, contested, or independently validated. A hyperedge may describe a coalition controlling a service during a bounded interval without reducing that coalition to a single person.
 
@@ -89,14 +89,14 @@ The model is a **temporal typed hypergraph**, not a presumption that every edge 
 
 Each participant can be characterized by a tuple:
 
-\[
-a_i=(\text{type},\text{roles},\text{capabilities},\text{authority},\text{visibility},\text{incentives},\text{constraints},\text{provenance}).\]
+$$
+a_i=(\text{type},\text{roles},\text{capabilities},\text{authority},\text{visibility},\text{incentives},\text{constraints},\text{provenance}).$$
 
 Roles and authority must be evaluated per context. A participant may simultaneously be a defensive service operator, an evidence contributor, and a member of a shared infrastructure team. Those overlapping roles create conflicts of interest that a flat agent identifier would conceal.
 
 ### 3.2 Ecological state versus truth
 
-The laboratory may contain hidden ground truth \(Z_t\), but no ordinary agent is assumed to observe it directly. An agent holds a belief or hypothesis portfolio \(H_i(t)\), supported by accessible observations \(O_i(t)\). The evaluator can inspect sealed ground truth under an independently controlled protocol. This separation is essential to measuring whether collaboration genuinely improves inference.
+The laboratory may contain hidden ground truth $Z_t$, but no ordinary agent is assumed to observe it directly. An agent holds a belief or hypothesis portfolio $H_i(t)$, supported by accessible observations $O_i(t)$. The evaluator can inspect sealed ground truth under an independently controlled protocol. This separation is essential to measuring whether collaboration genuinely improves inference.
 
 ---
 
@@ -142,12 +142,12 @@ A shared API gateway, orchestration service, or model provider can produce corre
 
 For synchronized changes across three fictional services:
 
-- \(H_1\): one operator controls all services;
-- \(H_2\): a coordinated team controls them;
-- \(H_3\): independent operators use one shared automation provider;
-- \(H_4\): an external scheduled event triggers similar behavior.
+- $H_1$: one operator controls all services;
+- $H_2$: a coordinated team controls them;
+- $H_3$: independent operators use one shared automation provider;
+- $H_4$: an external scheduled event triggers similar behavior.
 
-A contradiction against \(H_1\) must not automatically eliminate \(H_2\)–\(H_4\). The record should state the proposition, role, interval, conditions, and evidence lineage actually tested.
+A contradiction against $H_1$ must not automatically eliminate $H_2$–$H_4$. The record should state the proposition, role, interval, conditions, and evidence lineage actually tested.
 
 ### 5.2 Ecological false merge and false split
 
@@ -189,12 +189,12 @@ A relay artifact therefore carries a **lineage DAG** and dependency identifiers.
 
 REN provides directional evidence relevance: how much an observation bears on a particular hypothesis under a declared perspective and context. BCEF adds conditional tests:
 
-- **Forward IF:** If hypothesis \(H\) holds, what observable consequences should follow?
-- **Reverse IF:** Given observation \(E\), which alternative hypotheses could explain it?
+- **Forward IF:** If hypothesis $H$ holds, what observable consequences should follow?
+- **Reverse IF:** Given observation $E$, which alternative hypotheses could explain it?
 - **Counterfactual IF:** If a relevant condition were absent or changed, what should differ?
 - **Contradiction IF:** Which precisely scoped proposition is incompatible with the evidence and assumptions?
 
-The inverse of an implication is not generally valid: \(H\Rightarrow E\) does not establish \(E\Rightarrow H\).
+The inverse of an implication is not generally valid: $H\Rightarrow E$ does not establish $E\Rightarrow H$.
 
 ### 7.1 Structured ecological impact
 
@@ -237,13 +237,13 @@ Competition can include parallel defensive proposals, alternative causal explana
 
 ### 8.3 Relay portfolio selection
 
-A candidate relay portfolio \(Q\) can be chosen under resource and risk constraints:
+A candidate relay portfolio $Q$ can be chosen under resource and risk constraints:
 
-\[
+$$
 \max_Q \sum_{q\in Q} V(q)-\lambda C(Q)-\mu R(Q)-\nu D(Q),
-\]
+$$
 
-where \(V\) is estimated information or defensive value, \(C\) is operational cost, \(R\) is bounded experimental risk, and \(D\) penalizes redundant or correlated questions. These quantities are **research design variables**, not calibrated probabilities or a proven optimal policy.
+where $V$ is estimated information or defensive value, $C$ is operational cost, $R$ is bounded experimental risk, and $D$ penalizes redundant or correlated questions. These quantities are **research design variables**, not calibrated probabilities or a proven optimal policy.
 
 ---
 

@@ -161,7 +161,7 @@ A useful question may cross several levels. For example, a new address event (G0
 
 ### 5.1 Structural influence map
 
-Let the context be a typed graph or hypergraph \(G_t=(V_t,E_t,\tau,\pi)\), where \(\tau\) assigns types and \(\pi\) records provenance. A candidate question \(q\) may refer to a subgraph \(G_q\), an uncertainty set \(U_q\), and a consequence set \(C_q\). The architecture does not assume that graph distance alone determines relevance. REN's directional field supplies context-sensitive relevance, while BCEF checks whether proposed causal or logical implications are warranted.
+Let the context be a typed graph or hypergraph $G_t=(V_t,E_t,\tau,\pi)$, where $\tau$ assigns types and $\pi$ records provenance. A candidate question $q$ may refer to a subgraph $G_q$, an uncertainty set $U_q$, and a consequence set $C_q$. The architecture does not assume that graph distance alone determines relevance. REN's directional field supplies context-sensitive relevance, while BCEF checks whether proposed causal or logical implications are warranted.
 
 ---
 
@@ -290,7 +290,7 @@ The question is not simply “Are these addresses related?” It might be: “Wh
 **Counterfactual IF:** If the shared service were absent, would the pattern still be expected?  
 **Contradiction IF:** Which *specific* proposition would an observed discrepancy refute?
 
-The inverse implication is not logically valid without additional assumptions: \(H\Rightarrow E\) does not imply \(E\Rightarrow H\). Missing evidence is not automatically negative evidence. A contradiction against H1 must not automatically reject H2 or H3.
+The inverse implication is not logically valid without additional assumptions: $H\Rightarrow E$ does not imply $E\Rightarrow H$. Missing evidence is not automatically negative evidence. A contradiction against H1 must not automatically reject H2 or H3.
 
 ### 8.2 Distinguishability
 
@@ -302,20 +302,20 @@ A candidate question is weak if all hypotheses predict essentially the same obse
 
 Question selection is a multi-objective portfolio problem. A conceptual score is:
 
-\[
+$$
 Q(q\mid c)=w_I I(q\mid c)+w_R R(q\mid c)+w_C C(q\mid c)+w_N N(q\mid c)
 -w_K K(q\mid c)-w_H H(q\mid c)-w_D D(q\mid P),
-\]
+$$
 
 where:
 
-- \(I\): estimated discriminating information value;
-- \(R\): relevance to unresolved Security Residuals;
-- \(C\): consequence coverage under the current defensive objective;
-- \(N\): novelty relative to already evaluated questions;
-- \(K\): operational and evaluation cost;
-- \(H\): safety and privacy risk of the proposed exploration;
-- \(D\): redundancy relative to selected portfolio \(P\).
+- $I$: estimated discriminating information value;
+- $R$: relevance to unresolved Security Residuals;
+- $C$: consequence coverage under the current defensive objective;
+- $N$: novelty relative to already evaluated questions;
+- $K$: operational and evaluation cost;
+- $H$: safety and privacy risk of the proposed exploration;
+- $D$: redundancy relative to selected portfolio $P$.
 
 This is a **design heuristic**, not a calibrated probability or empirically established utility function. Weight selection, normalization, robustness, and calibration are experimental questions. A high score never overrides an independent safety veto.
 
@@ -323,10 +323,10 @@ This is a **design heuristic**, not a calibrated probability or empirically esta
 
 If defensible probability estimates are available, one may estimate expected information gain:
 
-\[
-\operatorname{EIG}(q)=\mathcal{H}(H\mid E)-
+$$
+\mathrm{EIG}(q)=\mathcal{H}(H\mid E)-
 \mathbb{E}_{o\sim p(o\mid q,E)}\left[\mathcal{H}(H\mid E,o)\right].
-\]
+$$
 
 The formula is inappropriate when likelihoods are invented, evidence is strongly dependent but treated as independent, or an adversary controls the observation channel. In those settings, use qualitative discriminability, interval estimates, or robust ranking rather than false precision.
 
@@ -402,7 +402,7 @@ No impact may silently alter immutable source evidence. Structural changes requi
 
 A question can produce new questions. That property is useful but can become an infinite or self-confirming loop.
 
-Define a recursive exploration state \(S_k=(Q_k,E_k,R_k,B_k)\), where \(Q_k\) is the question portfolio, \(E_k\) the admissible evidence set, \(R_k\) the unresolved residual registry, and \(B_k\) the remaining budget. A transition to \(S_{k+1}\) requires an authorized exploration and an independently recorded result.
+Define a recursive exploration state $S_k=(Q_k,E_k,R_k,B_k)$, where $Q_k$ is the question portfolio, $E_k$ the admissible evidence set, $R_k$ the unresolved residual registry, and $B_k$ the remaining budget. A transition to $S_{k+1}$ requires an authorized exploration and an independently recorded result.
 
 ### 12.1 Termination triggers
 
