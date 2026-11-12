@@ -387,14 +387,14 @@ No single score adequately captures system safety. ASSI proposes a multidimensio
 
 A useful constrained objective is:
 
-\[
+$$
 \min_{\pi} \mathbb{E}[L(\pi)]
 \quad \text{subject to} \quad
-\operatorname{Exposure}(\pi) \leq L_{\max},
-\quad \operatorname{PolicyInvariants}(\pi)=\mathrm{true}.
-\]
+\mathrm{Exposure}(\pi) \leq L_{\max},
+\quad \mathrm{PolicyInvariants}(\pi)=\mathrm{true}.
+$$
 
-Here \(\pi\) denotes a defense policy and \(L\) a defined loss function. Expected loss alone is insufficient: report tail-risk measures, adversarial worst-case scenarios within the test model, and uncertainty in the model itself. The exposure bound is an engineering target, not an absolute guarantee under unmodeled failures.
+Here $\pi$ denotes a defense policy and $L$ a defined loss function. Expected loss alone is insufficient: report tail-risk measures, adversarial worst-case scenarios within the test model, and uncertainty in the model itself. The exposure bound is an engineering target, not an absolute guarantee under unmodeled failures.
 
 ## 14. Benchmark Architecture and Baselines
 

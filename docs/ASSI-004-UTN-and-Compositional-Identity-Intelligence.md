@@ -93,23 +93,23 @@ A frequent inference error is to promote `shares_service(A,B)` into `common_cont
 
 ### 3.1 Many-to-many, overlapping, and temporal membership
 
-Let the system contain typed entities \(V\), observed events \(O\), candidate identity compositions \(C\), and evidence records \(E\). A composition is not necessarily a fixed set of people. It may be modeled as:
+Let the system contain typed entities $V$, observed events $O$, candidate identity compositions $C$, and evidence records $E$. A composition is not necessarily a fixed set of people. It may be modeled as:
 
-\[
+$$
 C_i(t) = \{(v_j, r_j, w_j, [t_{start},t_{end}])\},
-\]
+$$
 
-where \(v_j\) is an actor or subordinate composition, \(r_j\) is a role, and \(w_j\) is an optional, explicitly defined participation weight. The weight is not automatically a probability of guilt or ownership. Membership and role claims carry their own evidence references and confidence assessments.
+where $v_j$ is an actor or subordinate composition, $r_j$ is a role, and $w_j$ is an optional, explicitly defined participation weight. The weight is not automatically a probability of guilt or ownership. Membership and role claims carry their own evidence references and confidence assessments.
 
 An actor may participate in multiple compositions during overlapping periods. A composition may also contain subordinate compositions, yielding a nested or partially overlapping structure. Recursive membership requires cycle handling and clear semantics; a graph cycle must not silently imply organizational identity.
 
 ### 3.2 Graph versus hypergraph
 
-A conventional edge \((u,v)\) expresses a pairwise relationship. Collaborative activity may involve a set of participants and resources:
+A conventional edge $(u,v)$ expresses a pairwise relationship. Collaborative activity may involve a set of participants and resources:
 
-\[
+$$
 h = (\{v_1,v_2,\ldots,v_k\},\ \text{activity},\ \text{roles},\ \text{time},\ \text{evidence}).
-\]
+$$
 
 This motivates **hyperedges** or explicit `Activity` nodes connecting several actors. Either representation can work: a hypergraph is a conceptual model, not a mandatory database product. In an ordinary property graph, a first-class activity node with typed participant edges often preserves the same essential semantics.
 
@@ -127,12 +127,12 @@ These are distinct, potentially conflicting signals. **Identity continuity is no
 
 The following implications are generally invalid without additional premises:
 
-- Similar behavior \(\not\Rightarrow\) same operator.
-- Shared infrastructure \(\not\Rightarrow\) shared controller.
-- Shared controller \(\not\Rightarrow\) same natural person.
-- Common organization \(\not\Rightarrow\) identical activity for all members.
-- Different time zones \(\not\Rightarrow\) different organizations.
-- Repeated coordination \(\not\Rightarrow\) permanent coalition.
+- Similar behavior $\not\Rightarrow$ same operator.
+- Shared infrastructure $\not\Rightarrow$ shared controller.
+- Shared controller $\not\Rightarrow$ same natural person.
+- Common organization $\not\Rightarrow$ identical activity for all members.
+- Different time zones $\not\Rightarrow$ different organizations.
+- Repeated coordination $\not\Rightarrow$ permanent coalition.
 
 UTN should represent each claim at the appropriate type and relational level.
 
@@ -179,11 +179,11 @@ This is a conceptual lifecycle, not a claim that every entity eventually becomes
 
 Consider two addresses, X and Y, with partially correlated activity. A composition-aware system should retain at least these alternatives:
 
-- \(H_1\): X and Y are operated by the same individual.
-- \(H_2\): X and Y are operated by different members of the same team.
-- \(H_3\): X and Y are unrelated users of a shared service.
-- \(H_4\): X and Y are independent entities with coincidental or externally induced correlation.
-- \(H_5\): evidence is insufficient to distinguish the above.
+- $H_1$: X and Y are operated by the same individual.
+- $H_2$: X and Y are operated by different members of the same team.
+- $H_3$: X and Y are unrelated users of a shared service.
+- $H_4$: X and Y are independent entities with coincidental or externally induced correlation.
+- $H_5$: evidence is insufficient to distinguish the above.
 
 These are **candidate explanatory models**, not necessarily an exhaustive or mutually exclusive partition. For example, a team may also use a shared service. If probabilistic normalization is desired, the researcher must first define a mutually exclusive hypothesis space or use a model that permits overlapping relations.
 
@@ -215,12 +215,12 @@ An outcome may be `SUPPORTED`, `WEAKENED`, `CONTRADICTED_UNDER_ASSUMPTIONS`, or 
 
 | IF family | Question | Identity use |
 |---|---|---|
-| Forward IF | If \(H\) holds, what should be observable? | Predict a role-specific pattern |
-| Reverse IF | Does \(E\) support \(H\), relative to alternatives? | Assess diagnosticity, not logical converse |
-| Counterfactual IF | Would \(E\) also arise if \(H\) were false? | Evaluate shared-service explanation |
-| Contradiction IF | Which precise assumptions of \(H\) conflict with \(E\)? | Scope a negative impact |
+| Forward IF | If $H$ holds, what should be observable? | Predict a role-specific pattern |
+| Reverse IF | Does $E$ support $H$, relative to alternatives? | Assess diagnosticity, not logical converse |
+| Counterfactual IF | Would $E$ also arise if $H$ were false? | Evaluate shared-service explanation |
+| Contradiction IF | Which precise assumptions of $H$ conflict with $E$? | Scope a negative impact |
 
-A useful probabilistic framing is the likelihood ratio \(P(E\mid H)/P(E\mid H')\) when the distributions are defensibly estimated. A high similarity score alone is not this ratio. Bayesian or other probabilistic approaches require calibration and explicit priors; ASSI does not prescribe one universal inference algorithm.
+A useful probabilistic framing is the likelihood ratio $P(E\mid H)/P(E\mid H')$ when the distributions are defensibly estimated. A high similarity score alone is not this ratio. Bayesian or other probabilistic approaches require calibration and explicit priors; ASSI does not prescribe one universal inference algorithm.
 
 ### 6.2 Impact is structural, not merely numerical
 
@@ -231,7 +231,7 @@ A BCEF result may cause:
 - **Structural impact:** split a proposed cluster, revise a control edge, or retain alternative group hypotheses.
 - **Control impact:** request independent evidence, halt automatic attribution, or prioritize a new test.
 
-Crucially, a contradiction to \(H_1\) must not automatically raise \(H_2\). A candidate receives positive support only when the evidence discriminates in its favor, or when a properly specified exclusive hypothesis model justifies posterior redistribution.
+Crucially, a contradiction to $H_1$ must not automatically raise $H_2$. A candidate receives positive support only when the evidence discriminates in its favor, or when a properly specified exclusive hypothesis model justifies posterior redistribution.
 
 ### 6.3 Evidence-dependence safeguards
 
@@ -305,11 +305,11 @@ A future implementation should demonstrate that it can:
 
 ## 8. Worked synthetic case: one team, several operating combinations
 
-Consider four simulated actors \(A,B,C,D\). In a controlled dataset:
+Consider four simulated actors $A,B,C,D$. In a controlled dataset:
 
-- Activity 1 involves \(A+B\).
-- Activity 2 involves \(B+C\).
-- Activity 3 involves \(C+D\).
+- Activity 1 involves $A+B$.
+- Activity 2 involves $B+C$.
+- Activity 3 involves $C+D$.
 - Some activities share a service endpoint; others share a coordinating objective.
 - The ground-truth organization includes several overlapping task groups, but no single individual performs all actions.
 

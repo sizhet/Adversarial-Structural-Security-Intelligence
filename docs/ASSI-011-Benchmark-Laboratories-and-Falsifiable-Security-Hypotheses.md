@@ -233,7 +233,7 @@ Threat scenarios include compromised signing service, malicious delegated approv
 
 Primary: **maximum realized simulated unauthorized loss** over a fixed threat and time horizon, with tail-risk distribution and explicit exposure-budget violations. Secondary: unauthorized action acceptance, legitimate-action completion, false holds, policy latency, containment delay, recoverability, and availability during safety-system faults.
 
-For scenario \(x\), policy \(\pi\), and time horizon \(T\), let \(L_T(x,\pi)\) denote modeled unauthorized loss. Report \(\max_x L_T\) over the registered scenario set and an appropriate tail quantile or conditional tail expectation; neither is a universal bound beyond that set. A nominal loss ceiling is not evidence of enforcement unless all modeled action paths obey it.
+For scenario $x$, policy $\pi$, and time horizon $T$, let $L_T(x,\pi)$ denote modeled unauthorized loss. Report $\max_x L_T$ over the registered scenario set and an appropriate tail quantile or conditional tail expectation; neither is a universal bound beyond that set. A nominal loss ceiling is not evidence of enforcement unless all modeled action paths obey it.
 
 ### 6.5 Non-negotiable conformance tests
 

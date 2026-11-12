@@ -72,24 +72,24 @@ An alert may arrive too late, be missed, or be deliberately evaded. Independent 
 
 ## 3. The Trust Relocation Principle
 
-Consider a system transition from architecture \(A\) to architecture \(B\). A trust dependency on an intermediary may decline while a dependency on an online signer, upgrade administrator, bridge operator, or user endpoint increases. Thus:
+Consider a system transition from architecture $A$ to architecture $B$. A trust dependency on an intermediary may decline while a dependency on an online signer, upgrade administrator, bridge operator, or user endpoint increases. Thus:
 
-\[
+$$
 \Delta T_{\mathrm{intermediary}} < 0
 \quad\not\Rightarrow\quad
 \Delta R_{\mathrm{system}} < 0,
-\]
+$$
 
-where \(T\) denotes a specific trust dependency and \(R\) denotes an appropriately defined system-risk measure. This is a conceptual statement, not a universally quantified empirical law. Risk depends on threat likelihood, exposure, control effectiveness, recovery, and the evaluation horizon.
+where $T$ denotes a specific trust dependency and $R$ denotes an appropriately defined system-risk measure. This is a conceptual statement, not a universally quantified empirical law. Risk depends on threat likelihood, exposure, control effectiveness, recovery, and the evaluation horizon.
 
 A trust relocation should therefore be documented as a transition:
 
-\[
+$$
 \mathcal{R}: (d_{\mathrm{old}}, b_{\mathrm{old}})
 \longrightarrow (d_{\mathrm{new}}, b_{\mathrm{new}}),
-\]
+$$
 
-where \(d\) is a dependency and \(b\) is its trust boundary. The record should include the assumed attacker capabilities, affected assets, new concentration points, evidence supporting the change, and compensating controls.
+where $d$ is a dependency and $b$ is its trust boundary. The record should include the assumed attacker capabilities, affected assets, new concentration points, evidence supporting the change, and compensating controls.
 
 ### 3.1 Examples of relocation
 
@@ -113,17 +113,17 @@ Counting keys, signers, or controls is insufficient. Five signers managed by one
 
 Define a time-indexed attributed multigraph:
 
-\[
+$$
 G_t=(V_t,E_t,\tau_V,\tau_E,\alpha_t,\pi_t),
-\]
+$$
 
 where:
 
-- \(V_t\) contains typed entities;
-- \(E_t\) contains typed directed or undirected relationships;
-- \(\tau_V\) and \(\tau_E\) assign node and edge types;
-- \(\alpha_t\) stores time-dependent attributes and constraints;
-- \(\pi_t\) records evidence provenance, uncertainty, and validation state.
+- $V_t$ contains typed entities;
+- $E_t$ contains typed directed or undirected relationships;
+- $\tau_V$ and $\tau_E$ assign node and edge types;
+- $\alpha_t$ stores time-dependent attributes and constraints;
+- $\pi_t$ records evidence provenance, uncertainty, and validation state.
 
 **Candidate node types:** asset pool, wallet, key, signer, authorization service, contract, upgrade controller, endpoint, human role, team, organization, external service, monitoring component, recovery mechanism, and policy authority.
 
@@ -192,17 +192,17 @@ ASSI should maintain several separate measurements rather than fold all safety c
 
 ### 6.1 Reachable asset exposure
 
-Let \(A\) be a set of assets and \(C\) a compromised component or coalition. Define:
+Let $A$ be a set of assets and $C$ a compromised component or coalition. Define:
 
-\[
+$$
 X(C,t,h)=\sum_{a\in A} v_a(t)\,\rho(a\mid C,t,h),
-\]
+$$
 
-where \(v_a(t)\) is asset value and \(\rho\) is the fraction operationally reachable under the specified compromise, controls, and horizon \(h\). The fractions are scenario assumptions or experimentally established bounds, not probabilities by default.
+where $v_a(t)$ is asset value and $\rho$ is the fraction operationally reachable under the specified compromise, controls, and horizon $h$. The fractions are scenario assumptions or experimentally established bounds, not probabilities by default.
 
 ### 6.2 Conditional loss distribution
 
-For policy \(\pi\), attack scenario \(\omega\), and horizon \(h\), define \(L(\pi,\omega,h)\) as realized or simulated loss. Evaluation should include:
+For policy $\pi$, attack scenario $\omega$, and horizon $h$, define $L(\pi,\omega,h)$ as realized or simulated loss. Evaluation should include:
 
 - Expected loss under a stated scenario distribution;
 - Tail-loss measures for severe but plausible scenarios;
@@ -259,18 +259,18 @@ REN can assess behavioral similarity, directional evidence, and counterevidence 
 
 ### 8.3 BCEF: bidirectional conditional testing
 
-For a hypothesis \(H\) and evidence \(E\), BCEF asks:
+For a hypothesis $H$ and evidence $E$, BCEF asks:
 
-- **Forward IF:** If \(H\) were true, what should be observed?
-- **Reverse IF:** How diagnostic is the observed \(E\) for \(H\)?
-- **Counterfactual IF:** Could \(E\) arise without \(H\)?
-- **Contradiction IF:** Which precise formulation of \(H\), if any, does \(E\) challenge?
+- **Forward IF:** If $H$ were true, what should be observed?
+- **Reverse IF:** How diagnostic is the observed $E$ for $H$?
+- **Counterfactual IF:** Could $E$ arise without $H$?
+- **Contradiction IF:** Which precise formulation of $H$, if any, does $E$ challenge?
 
 The logical warning is fundamental:
 
-\[
+$$
 H\Rightarrow E\quad\not\Rightarrow\quad E\Rightarrow H.
-\]
+$$
 
 An IF test may modify scores, evidence dependencies, graph edges, candidate partitions, or the next test to run. It should **not** manufacture independent evidence by repeatedly reusing the same observation.
 
@@ -328,12 +328,12 @@ Candidate mitigations include transaction-aware signing policies, independent de
 
 A static Trust Graph will become stale. ASSI therefore connects structural modeling to adversarial testing:
 
-\[
+$$
 \text{Model}\rightarrow\text{Red/Blue Drive}
 \rightarrow\text{Independent Evaluation}
 \rightarrow\text{Residual}\rightarrow\text{Candidate Improvement}
 \rightarrow\text{Validation}\rightarrow\text{Governed Relay}.
-\]
+$$
 
 **Red Drive:** probes the modeled boundaries in an isolated, authorized environment.  
 **Blue Drive:** proposes containment and detection strategies.  

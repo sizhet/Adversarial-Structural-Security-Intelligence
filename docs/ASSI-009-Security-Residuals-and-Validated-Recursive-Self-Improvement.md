@@ -24,11 +24,11 @@ The proposal is a research framework, not evidence that autonomous RSI improves 
 
 A **Security Residual** is an observed, inferred, or explicitly unknown gap between a stated security requirement and available evidence of conformance, within a specified scope, time, and threat model.
 
-Let a scenario be \(x\), a defensive policy be \(\pi\), a desired outcome be \(G(x)\), and an evaluated outcome be \(O(x,\pi)\). A residual is not necessarily the scalar difference \(G-O\). In general it is a structured record:
+Let a scenario be $x$, a defensive policy be $\pi$, a desired outcome be $G(x)$, and an evaluated outcome be $O(x,\pi)$. A residual is not necessarily the scalar difference $G-O$. In general it is a structured record:
 
-\[
+$$
 R(x,\pi)=\langle \text{requirement},\text{observation},\text{gap},\text{evidence},\text{scope},\text{uncertainty}\rangle.
-\]
+$$
 
 This representation is essential because a failed recovery drill, an unobserved permission edge, and a false-positive identity inference cannot be responsibly aggregated into one undifferentiated score.
 
@@ -53,9 +53,9 @@ This representation is essential because a failed recovery drill, an unobserved 
 
 A working prioritization model may consider expected loss, worst-case exposure, exploitability under an explicit threat model, uncertainty, affected assets, control independence, and remediation cost:
 
-\[
+$$
 P(R)=f(\text{impact},\text{likelihood},\text{exposure},\text{uncertainty},\text{dependency},\text{cost}).
-\]
+$$
 
 This is a decision-support function, not a calibrated probability of compromise. A low estimated likelihood must not override a hard exposure limit or mandatory safety invariant.
 
@@ -91,11 +91,11 @@ The proposed lifecycle is:
 9. **Relay:** preserve results, failed candidates, unresolved residuals, and newly generated questions.
 10. **Repeat conditionally:** prioritize subsequent work based on measured information gain and risk.
 
-\[
+$$
 R_t \rightarrow Q_t \rightarrow C_t \rightarrow V_t \rightarrow G_t \rightarrow \pi_{t+1} \rightarrow R_{t+1}.
-\]
+$$
 
-Here \(Q\) denotes questions, \(C\) candidates, \(V\) validation, and \(G\) governance. The transition to \(\pi_{t+1}\) is **not automatic**; it occurs only when all independent release gates pass.
+Here $Q$ denotes questions, $C$ candidates, $V$ validation, and $G$ governance. The transition to $\pi_{t+1}$ is **not automatic**; it occurs only when all independent release gates pass.
 
 ### 4.1 Four-drive separation
 
@@ -161,11 +161,11 @@ The third level is especially sensitive: a system that changes its own evaluator
 
 A candidate may improve one threat class while worsening another. Therefore:
 
-\[
+$$
 \Delta \text{Security}_{\text{scenario A}}>0
 \quad\not\Rightarrow\quad
 \Delta \text{Security}_{\text{system}}>0.
-\]
+$$
 
 ASSI must preserve trade-offs and regressions, not only aggregate success scores.
 
@@ -179,14 +179,14 @@ A fundamental ASSI architectural requirement is that adaptive reasoning cannot g
 
 The separation must be **effective**, not merely conceptual. Distinct interfaces are insufficient if they share one compromise domain. Independence should be evaluated across credentials, administrators, deployment pipelines, hardware trust roots, and recovery procedures.
 
-Priority should be given to limiting the consequences of a failure, not claiming perfect prediction of failures. For a policy \(\pi\), a research objective is to reduce expected and tail losses while satisfying hard constraints:
+Priority should be given to limiting the consequences of a failure, not claiming perfect prediction of failures. For a policy $\pi$, a research objective is to reduce expected and tail losses while satisfying hard constraints:
 
-\[
+$$
 \min_{\pi}\ \mathbb{E}[L\mid\pi],
 \qquad \text{subject to } E_{\max}(\pi)\le L_{\max}.
-\]
+$$
 
-Here \(E_{\max}\) is an explicitly modeled exposure bound. The validity of the bound depends on the completeness of the asset and authorization model; an unknown path invalidates a claim of comprehensive coverage.
+Here $E_{\max}$ is an explicitly modeled exposure bound. The validity of the bound depends on the completeness of the asset and authorization model; an unknown path invalidates a claim of comprehensive coverage.
 
 ## 9. Proposed Structural Contracts
 

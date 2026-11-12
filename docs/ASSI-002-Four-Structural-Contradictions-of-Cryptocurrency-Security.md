@@ -291,10 +291,10 @@ This loop may improve defense against adaptive threats, but simulated success do
 
 An operational security objective should consider both expected loss and catastrophic tail exposure:
 
-\[
+$$
 \min_{\pi}\; \mathbb{E}[L\mid\pi]
 \quad\text{subject to enforceable exposure and authorization constraints.}
-\]
+$$
 
 Here `π` denotes a defense policy and `L` a loss measure under a specified threat model. The constraint is only meaningful if it is implemented independently of the component whose compromise is being evaluated. Some losses cannot be perfectly bounded in every architecture; any claimed bound must state its assumptions and excluded failure modes.
 

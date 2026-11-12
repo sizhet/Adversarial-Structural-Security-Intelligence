@@ -78,36 +78,36 @@ A useful conceptual picture is two structures connected by a proposed similarity
 
 ## 4. Metric similarity and directional relevance are distinct
 
-Let observations or typed structural units be \(x\) and \(y\), and let \(c\) denote context. A similarity function can be written:
+Let observations or typed structural units be $x$ and $y$, and let $c$ denote context. A similarity function can be written:
 
-\[
+$$
 M(x,y\mid c) \in [0,1].
-\]
+$$
 
 This is a representation of feature resemblance under a specified metric. It is not a probability of common control unless empirically calibrated for that interpretation.
 
-Let \(h\) denote a hypothesis and \(d\) a **directional field**—a task, security objective, or inquiry perspective. A directional relevance function is:
+Let $h$ denote a hypothesis and $d$ a **directional field**—a task, security objective, or inquiry perspective. A directional relevance function is:
 
-\[
+$$
 R(e,h,d,c) \in \mathbb{R},
-\]
+$$
 
-where \(e\) is an evidence item. Directionality can change the importance of the same feature across tasks. For example, synchronized timing might be relevant when investigating automation, but weakly discriminative when many users react to a public market event.
+where $e$ is an evidence item. Directionality can change the importance of the same feature across tasks. For example, synchronized timing might be relevant when investigating automation, but weakly discriminative when many users react to a public market event.
 
 A conceptual scoring architecture is:
 
-\[
+$$
 S(h\mid E,d,c)=F\!\left(S_0(h),\;\{R(e_i,h,d,c),q_i,p_i\}_{i=1}^{n},\;D(E),\;A\right),
-\]
+$$
 
 where:
 
-- \(S_0(h)\): initial hypothesis assessment or prior, with declared semantics;
-- \(q_i\): evidence quality or reliability metadata;
-- \(p_i\): provenance and dependency information;
-- \(D(E)\): dependency structure among evidence items;
-- \(A\): alternative hypotheses and relevant counterevidence;
-- \(F\): an explicitly chosen and validated aggregation/update rule.
+- $S_0(h)$: initial hypothesis assessment or prior, with declared semantics;
+- $q_i$: evidence quality or reliability metadata;
+- $p_i$: provenance and dependency information;
+- $D(E)$: dependency structure among evidence items;
+- $A$: alternative hypotheses and relevant counterevidence;
+- $F$: an explicitly chosen and validated aggregation/update rule.
 
 **This equation is an architectural schema, not a validated estimator.** A score must not be called a posterior probability unless the model, likelihood assumptions, and calibration support that claim.
 
@@ -129,11 +129,11 @@ Evidence strength is conditional on a hypothesis and the alternatives, not an in
 
 ### 5.1 Evidence strength should be comparative
 
-Where a probabilistic model is justified, the discriminative value of evidence \(e\) for hypotheses \(h_1\) and \(h_2\) may be expressed by a likelihood ratio:
+Where a probabilistic model is justified, the discriminative value of evidence $e$ for hypotheses $h_1$ and $h_2$ may be expressed by a likelihood ratio:
 
-\[
+$$
 \Lambda(e;h_1,h_2)=\frac{P(e\mid h_1)}{P(e\mid h_2)}.
-\]
+$$
 
 This highlights an essential distinction: a feature may be common under a hypothesis and yet offer little support if it is equally common under an alternative. Likelihood ratios require defensible likelihood estimates; they are not inferred from resemblance alone.
 
@@ -155,7 +155,7 @@ REN should maintain a provenance/dependency graph linking:
 - Evidence items to shared latent causes where known;
 - Tests to the evidence used to generate them.
 
-A simple additive rule \(S=\sum_i w_i e_i\) can become overconfident when dependencies are ignored. Candidate implementations should use dependency-aware aggregation, hierarchical models, or conservative evidence grouping, and must validate their behavior empirically.
+A simple additive rule $S=\sum_i w_i e_i$ can become overconfident when dependencies are ignored. Candidate implementations should use dependency-aware aggregation, hierarchical models, or conservative evidence grouping, and must validate their behavior empirically.
 
 **Invariant REN-DEP-01:** Deriving additional features from one observation must not, by itself, be treated as obtaining independent corroboration.
 
@@ -169,12 +169,12 @@ ASSI-004 establishes that the target of attribution may be an individual, team, 
 
 Consider synthetic addresses X and Y with similar transaction timing. A useful hypothesis portfolio might contain:
 
-- \(H_1\): One human operator controls both.
-- \(H_2\): Different operators belong to the same team.
-- \(H_3\): Both use the same external automation service.
-- \(H_4\): Independent operators respond to a shared public trigger.
+- $H_1$: One human operator controls both.
+- $H_2$: Different operators belong to the same team.
+- $H_3$: Both use the same external automation service.
+- $H_4$: Independent operators respond to a shared public trigger.
 
-The same observation can have different implications for each hypothesis. A mismatch in operator working hours may weaken \(H_1\), but not necessarily \(H_2\). Shared infrastructure may support \(H_3\) without proving \(H_2\).
+The same observation can have different implications for each hypothesis. A mismatch in operator working hours may weaken $H_1$, but not necessarily $H_2$. Shared infrastructure may support $H_3$ without proving $H_2$.
 
 ### 7.1 Hypothesis-scoped contradiction
 
@@ -196,11 +196,11 @@ Evidence is time-indexed. A shared control relationship may exist during one ope
 
 REN can use **Metric Differential Trees (MDT)** to represent differences between successive structural states:
 
-\[
-\Delta_t = \operatorname{Diff}(G_{t-1},G_t),
-\]
+$$
+\Delta_t = \mathrm{Diff}(G_{t-1},G_t),
+$$
 
-where \(G_t\) is a typed, provenance-aware structural graph at time \(t\). The difference may concern a new observed transaction, changed evidence quality, revised membership hypothesis, altered risk policy, or retracted source.
+where $G_t$ is a typed, provenance-aware structural graph at time $t$. The difference may concern a new observed transaction, changed evidence quality, revised membership hypothesis, altered risk policy, or retracted source.
 
 A useful temporal record distinguishes:
 
@@ -217,12 +217,12 @@ This distinction supports replay, correction, and audit without rewriting histor
 
 REN identifies and evaluates evidence; **BCEF**, developed in ASSI-006, tests conditional implications and propagates impacts to the scoring structure. Four test modes are proposed:
 
-1. **Forward IF:** If \(h\) is true, what observations should follow under stated assumptions?
-2. **Reverse IF:** Given observation \(e\), how does it discriminate \(h\) from alternatives?
-3. **Counterfactual IF:** If \(h\) were false, could \(e\) still arise under another explanation?
-4. **Contradiction IF:** Which specific version of \(h\), if any, is incompatible with \(e\)?
+1. **Forward IF:** If $h$ is true, what observations should follow under stated assumptions?
+2. **Reverse IF:** Given observation $e$, how does it discriminate $h$ from alternatives?
+3. **Counterfactual IF:** If $h$ were false, could $e$ still arise under another explanation?
+4. **Contradiction IF:** Which specific version of $h$, if any, is incompatible with $e$?
 
-The implication \(h\Rightarrow e\) does not entail \(e\Rightarrow h\). A positive test result must not be mistaken for logical proof, and a failed prediction should be interpreted in light of observability, context, and assumptions.
+The implication $h\Rightarrow e$ does not entail $e\Rightarrow h$. A positive test result must not be mistaken for logical proof, and a failed prediction should be interpreted in light of observability, context, and assumptions.
 
 ### 9.1 Structural impact, not only numeric delta
 

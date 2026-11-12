@@ -135,11 +135,11 @@ ASSI does not optimize only for the probability of intrusion. A practical object
 
 A simplified research formulation is:
 
-\[
+$$
 \min_{\pi}\;\mathbb{E}[L\mid\pi]
-\]
+$$
 
-subject to enforceable policy constraints and an explicitly defined maximum acceptable exposure. Here, \(\pi\) denotes a defensive policy and \(L\) denotes loss under a specified threat model. This is a modeling objective, not a guarantee that all losses can be capped under every conceivable failure.
+subject to enforceable policy constraints and an explicitly defined maximum acceptable exposure. Here, $\pi$ denotes a defensive policy and $L$ denotes loss under a specified threat model. This is a modeling objective, not a guarantee that all losses can be capped under every conceivable failure.
 
 Evaluation should include:
 

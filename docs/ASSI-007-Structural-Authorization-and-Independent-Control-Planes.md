@@ -75,11 +75,11 @@ These layers are not guaranteed to be sequential in every implementation. Their 
 
 For a proposed operation `op` in context `ctx`, define:
 
-\[
-A(op,ctx)=\operatorname{Permit}
+$$
+A(op,ctx)=\mathrm{Permit}
 \quad\text{only if}\quad
 C(op)\land P(op,ctx)\land I(op,ctx)\land B(op,ctx),
-\]
+$$
 
 where `C` denotes cryptographic checks, `P` hard policy compliance, `I` independently verifiable intent requirements, and `B` exposure-bound compliance. The expression is conceptual: actual implementations require typed inputs, precise policy semantics, race-free state updates, and authoritative enforcement.
 
@@ -186,11 +186,11 @@ ASSI therefore distinguishes:
 
 An indicative policy objective is:
 
-\[
+$$
 \min_{\pi}\ \mathbb{E}[L\mid\pi]
 \quad\text{subject to}\quad
 L_{\mathrm{credible\ worst\ case}}(\pi)\leq L_{\max},
-\]
+$$
 
 where `π` denotes a security policy. A finite worst-case bound is meaningful only under explicit assumptions about compromised components and enforceable asset segmentation; it cannot be asserted from a model score alone.
 

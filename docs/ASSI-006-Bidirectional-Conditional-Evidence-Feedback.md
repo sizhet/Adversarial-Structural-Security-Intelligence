@@ -61,21 +61,21 @@ The phrase **Two-Ways IF** emphasizes looking in both explanatory directions. A 
 
 Let H denote a hypothesis, E an observation, and C a context. A forward claim may be expressed as:
 
-\[
+$$
 H \land C \Rightarrow E.
-\]
+$$
 
 This does **not** license the converse:
 
-\[
+$$
 E \Rightarrow H.
-\]
+$$
 
 A probabilistic test may instead compare likelihoods:
 
-\[
+$$
 \mathrm{LR}(E;H,H_0,C)=\frac{P(E\mid H,C)}{P(E\mid H_0,C)},
-\]
+$$
 
 where H₀ is an explicitly chosen alternative. This ratio is meaningful only if the conditional distributions and evidence dependencies are modeled or estimated sufficiently well. If those quantities are unavailable, the system should emit a qualitative, explicitly uncalibrated result rather than invent a probability.
 
@@ -113,9 +113,9 @@ Different active hours may challenge H1, but they do not automatically refute H2
 
 A hypothesis portfolio should preserve overlapping and temporally changing possibilities:
 
-\[
+$$
 \mathcal{P}_t=\{H_1^{(t)},H_2^{(t)},\ldots,H_k^{(t)}\}.
-\]
+$$
 
 Its members need not be mutually exclusive. A shared-service explanation can coexist with a team explanation. Where probabilities are used, the model must define an appropriate mutually exclusive partition or a joint model before normalizing scores to sum to one. Otherwise, report per-hypothesis scores without pretending they are posterior probabilities.
 
@@ -178,13 +178,13 @@ A structural action is not equivalent to an immediately executable production mu
 
 ### 4.2 Update semantics
 
-Let \(S_t(H)\) be a score associated with H at time t, and \(I_t\) a validated impact derived from a conditional test:
+Let $S_t(H)$ be a score associated with H at time t, and $I_t$ a validated impact derived from a conditional test:
 
-\[
-S_{t+1}(H)=\operatorname{Update}(S_t(H),I_t,\mathcal{D}_t,\mathcal{G}_t),
-\]
+$$
+S_{t+1}(H)=\mathrm{Update}(S_t(H),I_t,\mathcal{D}_t,\mathcal{G}_t),
+$$
 
-where \(\mathcal{D}_t\) represents evidence dependencies and \(\mathcal{G}_t\) represents governance and update constraints. `Update` is deliberately abstract: different score families require different calibrated update rules. A numeric `score_delta` must not be treated as a universal probability increment.
+where $\mathcal{D}_t$ represents evidence dependencies and $\mathcal{G}_t$ represents governance and update constraints. `Update` is deliberately abstract: different score families require different calibrated update rules. A numeric `score_delta` must not be treated as a universal probability increment.
 
 If a well-specified probabilistic model exists, posterior odds may be updated using likelihood ratios from **new, conditionally independent evidence**. If evidence is dependent, the joint likelihood or an appropriate dependency model is required. BCEF test results derived from existing observations are *interpretations of evidence*, not independent observations to be counted again.
 
@@ -301,10 +301,10 @@ Test whether further investigation is justified. Example: if another test is exp
 
 This yields a proposed recursive loop:
 
-\[
+$$
 \text{Question}\rightarrow\text{IF Test}\rightarrow\text{Evidence Impact}
 \rightarrow\text{Structural Revision}\rightarrow\text{Next Question}.
-\]
+$$
 
 ### 6.1 Termination and anti-self-confirmation controls
 
