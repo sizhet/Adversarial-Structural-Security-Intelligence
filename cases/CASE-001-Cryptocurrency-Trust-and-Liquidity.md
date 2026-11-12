@@ -50,12 +50,12 @@ A naive design increases `L` to reduce withdrawal delays while assuming cryptogr
 
 A conceptual design objective is:
 
-\[
-\min_{\pi}\;\alpha\,\operatorname{LegitimateDelay}(\pi)
-+\beta\,\operatorname{LossExposure}(\pi)
-+\gamma\,\operatorname{FalseHold}(\pi)
-+\delta\,\operatorname{RecoveryCost}(\pi)
-\]
+$$
+\min_{\pi}\;\alpha\,\mathrm{LegitimateDelay}(\pi)
++\beta\,\mathrm{LossExposure}(\pi)
++\gamma\,\mathrm{FalseHold}(\pi)
++\delta\,\mathrm{RecoveryCost}(\pi)
+$$
 
 subject to explicit hard authorization, exposure, and governance constraints. The weights represent declared stakeholder tradeoffs, **not** permission to violate a hard safety rule. The optimization is illustrative and not a deployable formula.
 
@@ -118,9 +118,9 @@ The experiment must document which services are assumed trustworthy. If the PEP 
 
 Define a directed, time-indexed multigraph:
 
-\[
+$$
 G_T(t)=(V_T,E_T(t),\tau_V,\tau_E)
-\]
+$$
 
 where nodes include principals, services, signing keys, policies, assets, approval groups, and audit stores. Edges encode `can_request`, `can_approve`, `can_sign`, `can_execute`, `can_change_policy`, `can_replenish`, and `can_recover`. Every edge carries an issuer, validity interval, provenance, and applicable constraints.
 
@@ -210,9 +210,9 @@ Possible decisions are `DENY`, `HOLD`, `ESCALATE`, and `ALLOW`, as defined in SP
 
 Let `B_w` be the approved budget for a window and `C_w` be committed plus reserved exposure. A request of exposure `x` may pass the budget check only if:
 
-\[
+$$
 C_w + x \le B_w
-\]
+$$
 
 The update must be atomic under concurrent requests. Other checks remain necessary; passing a budget check does not establish legitimate intent.
 
@@ -291,10 +291,10 @@ Compare arms under matched traffic, transaction finality model, simulator comput
 
 For a declared compromise scenario `s`, define:
 
-\[
-\operatorname{BoundedLossRatio}(s)=
-\frac{\operatorname{UEV}(s)}{\operatorname{DeclaredExposureBudget}(s)}.
-\]
+$$
+\mathrm{BoundedLossRatio}(s)=
+\frac{\mathrm{UEV}(s)}{\mathrm{DeclaredExposureBudget}(s)}.
+$$
 
 This ratio is a diagnostic, not a guarantee. A value below one can coexist with unacceptable customer harm, policy bypass, or misconfigured budgets. Always report absolute loss and the policy assumptions.
 

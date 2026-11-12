@@ -192,21 +192,21 @@ Alternative terminal or intermediate states include `DENIED`, `HELD`, `EXPIRED`,
 
 Define, for a fixed benchmark interval, a policy-controlled exposure function:
 
-\[
+$$
 X_t = X_{\mathrm{executed},t} + X_{\mathrm{reserved},t} + X_{\mathrm{delegated},t} + X_{\mathrm{contingent},t}.
-\]
+$$
 
 Terms are not necessarily additive in every real system: overlaps and correlated exposures require a documented aggregation rule to avoid double counting. The lab records both a conservative upper bound and a disaggregated exposure vector.
 
 A proposed hard constraint is:
 
-\[
-\operatorname{Authorize}(r,t) \Rightarrow
-  \operatorname{VerifiedIntent}(r,t)
-  \land \operatorname{BoundPayload}(r,t)
-  \land \operatorname{WithinLimits}(r,t)
-  \land \operatorname{Fresh}(r,t).
-\]
+$$
+\mathrm{Authorize}(r,t) \Rightarrow
+  \mathrm{VerifiedIntent}(r,t)
+  \land \mathrm{BoundPayload}(r,t)
+  \land \mathrm{WithinLimits}(r,t)
+  \land \mathrm{Fresh}(r,t).
+$$
 
 This is a **specification target**, not a proof that an implementation satisfies it.
 

@@ -134,11 +134,11 @@ The `actor-*` ground-truth namespaces are evaluator-only unless a fictional iden
 
 Represent the structural model as a time-indexed typed hypergraph:
 
-\[
+$$
 \mathcal{G}_t=(V_t,\mathcal{E}_t,\tau,\pi,\nu),
-\]
+$$
 
-where \(V_t\) are typed nodes, \(\mathcal{E}_t\) are possibly multi-party relations, \(\tau\) records type, \(\pi\) records provenance, and \(\nu\) records validity intervals. A hyperedge may encode a team composed of people, a shared execution service, or a joint approval relation without asserting that all participants are one person.
+where $V_t$ are typed nodes, $\mathcal{E}_t$ are possibly multi-party relations, $\tau$ records type, $\pi$ records provenance, and $\nu$ records validity intervals. A hyperedge may encode a team composed of people, a shared execution service, or a joint approval relation without asserting that all participants are one person.
 
 ### 5.1 Distinct relations
 
@@ -148,13 +148,13 @@ where \(V_t\) are typed nodes, \(\mathcal{E}_t\) are possibly multi-party relati
 
 A team hypothesis may be represented as:
 
-\[
+$$
 T_1(t)=\{P_A,P_B\}\quad (t\in E0\cup E1),
-\]
+$$
 
-\[
+$$
 T_1(t)=\{P_A,P_D\}\quad (t\in E2\cup E3).
-\]
+$$
 
 These equations describe **synthetic evaluator truth**, not facts automatically visible to the inference engine. The inferred model must propose and revise membership from permitted evidence.
 
@@ -179,11 +179,11 @@ A finding inconsistent with H1 must not be treated as a contradiction of H2, H3,
 
 REN ranks evidence relative to a question and a hypothesis, rather than treating generic similarity as proof of identity.
 
-For evidence \(e\), hypothesis \(h\), direction \(d\), and context \(c\), define an illustrative relevance function:
+For evidence $e$, hypothesis $h$, direction $d$, and context $c$, define an illustrative relevance function:
 
-\[
+$$
 R(e,h\mid d,c)=f(\text{feature match},\text{direction},\text{reliability},\text{dependencies},\text{alternatives}).
-\]
+$$
 
 This is a research abstraction, not a calibrated posterior probability. Its implementation must record how the score was computed and which observations contributed.
 
