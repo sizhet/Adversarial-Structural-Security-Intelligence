@@ -205,6 +205,8 @@ Links above assume the corresponding research files are committed to their desig
 
 Citation metadata will be provided in `CITATION.cff` and `.zenodo.json`. **Do not insert or infer a DOI before one has actually been assigned.** Refer to the specific release version and permanent archive record when available.
 
+DOI: 10.5281/zenodo.24480993 
+
 ---
 
 ## 📚 DBM-SI Series Navigation
