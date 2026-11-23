@@ -27,7 +27,7 @@ The format follows the spirit of [Keep a Changelog](https://keepachangelog.com/e
 
 ---
 
-## [0.1.0] — 2026-11-02 (research foundation; release candidate)
+## [0.1.0] — 2026-11-23 (research foundation)
 
 ### Added — research foundation
 
