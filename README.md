@@ -88,7 +88,7 @@ The **27 core research documents** are organized as 12 articles, 6 draft specifi
 
 - **Conceptual:** ASSI-001 → ASSI-002 → ASSI-004 → ASSI-006 → ASSI-007 → ASSI-010 → ASSI-012.
 - **Engineering / contracts:** ASSI-010 → SPEC-001 → SPEC-002 → SPEC-003 → SPEC-004 → SPEC-005 → SPEC-006.
-- **Experimental / falsification:** ASSI-011 → CASE-001 → CASE-002 → CASE-003 → CASE-004 → CASE-005 → VALIDATION-ROADMAP (when published).
+- **Experimental / falsification:** ASSI-011 → CASE-001 → CASE-002 → CASE-003 → CASE-004 → CASE-005 → [VALIDATION-ROADMAP.md](VALIDATION-ROADMAP.md).
 
 ### A. Core research articles (`docs/`)
 

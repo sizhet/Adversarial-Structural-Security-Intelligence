@@ -170,8 +170,6 @@ Do not copy the root-relative path `figures/...` unchanged into a nested article
 | Fig-007 | `ASSI-009` | `SPEC-006`, `EXT-002`, `EXT-004` |
 | Fig-008 | `ASSI-011` | `ASSI-010`, `VALIDATION-ROADMAP.md` |
 
-The figure index is a guide to *recommended* placements, not a claim that the images are already embedded in each article. A single primary placement per figure is sufficient for v0.1.0; secondary placements are optional.
-
 ## 7. Pre-release asset checklist
 
 - [ ] Export Fig-001 through Fig-008 as eight separate PNGs.
