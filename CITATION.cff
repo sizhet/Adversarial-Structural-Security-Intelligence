@@ -24,6 +24,7 @@ url: 'https://github.com/sizhet/Adversarial-Structural-Security-Intelligence'
 version: 0.1.0
 date-released: 2026-11-23
 license: Apache-2.0
+doi: 10.5281/zenodo.24480993
 keywords:
   - structural security
   - adversarial intelligence
